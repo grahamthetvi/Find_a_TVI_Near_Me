@@ -11,11 +11,11 @@ Both files are in `raw_foia/`. They are public ISBE FOIA responses. They are com
 | File | Workbook dates | Sheet | Rows | Columns | Role |
 | --- | --- | --- | --- | --- | --- |
 | `FOIA_-_BPS_Redacted.xlsx` | Created 10 May 2024, edited 13 May 2024 | `Sheet1` | 638 | First name, last name, district, site | Older file. Serving district and school building. |
-| `FOIA_-_BPS_Holders_Redacted.xlsx` | Created 4 May 2026, edited 7 May 2026 | `results` | 950 | First name, last name, entity | Newer file. Employing district or special-education cooperative. Includes 15 Department of Human Services rows. 631 rows have no entity. |
+| `Teacher_Logs_2024-2025.xlsx` | Created 1 Nov 2026 | `results` | 551 | First name, last name, entity, date of activity, lookup notes, source URL | Current employer file. Replaces the May 2026 holders extract. |
 
-565 names appear in both files. The May 2026 file does not include district, school, region, phone, O&M, or EI. Those last three fields are not in either workbook.
+The teacher log has 548 people. 477 of them also appear in the May 2024 file. 144 names are only in the 2024 file, and 71 are only in the teacher log. 375 rows name an employer. 176 rows do not, and those rows have no activity year. Dated employer rows are marked 2026 (319), 2025 (24), 2024 (14), or 2023 (18). Fifteen rows are still Department of Human Services. Lookup notes mark 148 people as “No record” and 26 as ambiguous. 84 rows include a public source URL. The log does not include district, school, phone, O&M, or Early Intervention.
 
-The site title in the working plan says 2024–2025. Neither workbook is dated in that school year. The public title stays unsettled until the edition year is chosen. The merge rules below do not depend on that title.
+The filename says 2024–2025. Most placed rows are dated 2026. The public edition title can follow the filename. The merge rules below use the teacher log as the employer layer and the May 2024 file as the district and school layer.
 
 ## What the site will do
 
@@ -34,8 +34,9 @@ People with no located employer stay in `data/tvis.json` and stay out of the dis
 - Match people on first and last name, after trimming whitespace and fixing all-caps names. Keep hyphens and apostrophes.
 - Drop a `NULL` employer row when that person has a real employer in either file.
 - Keep a person who is `NULL` in both files, with an empty employer list.
-- When the 2026 file names a cooperative and the 2024 file names a district or school for the same person, store both on one employer record.
-- When one person has two schools, store both, and search by the closer one so the person appears once.
+- When the teacher log names an employer and the 2024 file names a district or school for the same person, store both on one employer record.
+- When one person has two schools or two employer rows, store both, and search by the closer one so the person appears once.
+- Keep the activity year, lookup note, and source URL on the employer record. A “No record” or ambiguous note does not invent an employer. The source URL is a public lookup link, and it is not a LinkedIn profile.
 - A Department of Human Services row sets Early Intervention to yes. Keep a school assignment from the 2024 file when that person has one.
 - Optional `enrichment_overrides.csv` may add a checked public LinkedIn URL, a front-office phone, or an O&M flag. The script must not wipe those on the next build.
 - Coordinates are the public school or district office, from the Census gazetteer or the Census geocoder. Cache them. Do not invent a coordinate. Leave it empty until it is checked.
