@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Find a TVI Near Me – Illinois Edition</title>
+    <meta
+      name="description"
+      content="Search for the ten Teachers of the Visually Impaired with the closest public offices in Illinois."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#results">Skip to results</a>
+    <header>
+      <p class="edition">Illinois Edition</p>
+      <h1>Find a TVI Near Me</h1>
+      <p>By Addison Graham. Credited to Lilly Graham.</p>
+    </header>
+    <main>
+      <p>
+        This search lists Teachers of the Visually Impaired who have a public
+        Illinois employer on the 2024–2025 log. It shows the ten closest
+        offices. It does not show home addresses or personal phone numbers.
+      </p>
+      <p>
+        Distance is measured to the employer’s public office. For a cooperative
+        or a special-education joint agreement, that office may not be the town
+        where the teacher sees students. A Chicago Public Schools row uses a
+        school building when one was on the earlier log. Otherwise it says
+        “district office.”
+      </p>
+      <p id="omitted"></p>
+      <form id="search-form" role="search" aria-describedby="q-hint">
+        <div class="field">
+          <label for="q">Illinois ZIP code, city, or street address</label>
+          <input id="q" name="q" type="search" required autocomplete="off" />
+          <p id="q-hint">Example: 62704, Springfield, or 100 W Randolph St, Chicago, IL 60601.</p>
+        </div>
+        <fieldset>
+          <legend>Limit the list</legend>
+          <label class="check" for="only-om">
+            <input id="only-om" name="om" type="checkbox" />
+            Orientation and mobility (O&amp;M)
+          </label>
+          <label class="check" for="only-ei">
+            <input id="only-ei" name="ei" type="checkbox" />
+            Early Intervention
+          </label>
+        </fieldset>
+        <div class="actions">
+          <button id="search-button" type="submit">Search</button>
+          <button id="theme" type="button" aria-pressed="false">Black and yellow theme</button>
+        </div>
+      </form>
+      <p id="status" tabindex="-1" role="status" aria-live="polite">
+        Enter an Illinois city, ZIP code, or street address.
+      </p>
+      <div class="table-wrap" tabindex="0" aria-label="Nearest teachers">
+        <table id="results">
+          <caption id="results-caption">Results appear here after a search.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Employer</th>
+              <th scope="col">Miles</th>
+              <th scope="col">LinkedIn</th>
+              <th scope="col">Front-office phone</th>
+              <th scope="col">Name</th>
+              <th scope="col">O&amp;M</th>
+              <th scope="col">Early Intervention</th>
+            </tr>
+          </thead>
+          <tbody id="result-rows"></tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Offices that could not be located from a public record are left out of
+        the list. A front-office phone or a public profile appears only after
+        it has been checked.
+      </p>
+    </footer>
+    <noscript>
+      <p>This search needs JavaScript. The directory files are in the data folder.</p>
+    </noscript>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
