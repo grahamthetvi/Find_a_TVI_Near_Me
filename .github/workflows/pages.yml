@@ -1,0 +1,55 @@
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+
+      - name: Assemble the site
+        run: |
+          mkdir -p site/data
+          cp index.html style.css app.js search.js robots.txt site/
+          cp data/tvis.json data/entities.json data/il_locations.json site/data/
+          test -s site/index.html
+          test -s site/style.css
+          test -s site/app.js
+          test -s site/search.js
+          test -s site/robots.txt
+          test -s site/data/tvis.json
+          test -s site/data/entities.json
+          test -s site/data/il_locations.json
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
