@@ -16,18 +16,21 @@
       <p class="edition">Illinois Edition</p>
       <h1>Find a TVI Near Me</h1>
       <p>By Addison Graham. Credited to Lilly Graham.</p>
+      <p class="nav"><a href="analyze.html">Coverage by county and credential</a></p>
     </header>
     <main>
       <p>
-        This search lists Teachers of the Visually Impaired who have a public
-        Illinois employer on the 2024–2025 log. It shows the ten closest
-        offices. It does not show home addresses or personal phone numbers.
+        This search lists people with a public Illinois office on the selected
+        school year. Teachers of the Visually Impaired start selected. Other
+        credentials appear when those boxes are checked. It shows the ten
+        closest offices. It does not show home addresses or personal phone
+        numbers.
       </p>
       <p>
         Distance is measured to the employer’s public office. For a cooperative
         or a special-education joint agreement, that office may not be the town
         where the teacher sees students. A Chicago Public Schools row uses a
-        school building when one was on the earlier log. Otherwise it says
+        school building when one was on the 2023–2024 log. Otherwise it says
         “district office.”
       </p>
       <p id="omitted"></p>
@@ -38,11 +41,41 @@
           <p id="q-hint">Example: 62704, Springfield, or 100 W Randolph St, Chicago, IL 60601.</p>
         </div>
         <fieldset>
-          <legend>Limit the list</legend>
-          <label class="check" for="only-om">
-            <input id="only-om" name="om" type="checkbox" />
-            Orientation and mobility (O&amp;M)
+          <legend>School year</legend>
+          <label class="check" for="year-2024">
+            <input id="year-2024" name="year" type="radio" value="2024-2025" checked />
+            2024–2025
           </label>
+          <label class="check" for="year-2023">
+            <input id="year-2023" name="year" type="radio" value="2023-2024" />
+            2023–2024
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Credentials</legend>
+          <label class="check" for="role-tvi">
+            <input id="role-tvi" name="roles" type="checkbox" value="TVI" checked />
+            Teacher of the Visually Impaired (TVI)
+          </label>
+          <label class="check" for="role-coms">
+            <input id="role-coms" name="roles" type="checkbox" value="COMS" />
+            Orientation and mobility (COMS)
+          </label>
+          <label class="check" for="role-catis">
+            <input id="role-catis" name="roles" type="checkbox" value="CATIS" />
+            Certified Assistive Technology Instructional Specialist (CATIS)
+          </label>
+          <label class="check" for="role-clvt">
+            <input id="role-clvt" name="roles" type="checkbox" value="CLVT" />
+            Certified Low Vision Therapist (CLVT)
+          </label>
+          <label class="check" for="role-cvrt">
+            <input id="role-cvrt" name="roles" type="checkbox" value="CVRT" />
+            Certified Vision Rehabilitation Therapist (CVRT)
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Limit the list</legend>
           <label class="check" for="only-ei">
             <input id="only-ei" name="ei" type="checkbox" />
             Early Intervention
@@ -66,6 +99,7 @@
               <th scope="col">LinkedIn</th>
               <th scope="col">Front-office phone</th>
               <th scope="col">Name</th>
+              <th scope="col">Credential</th>
               <th scope="col">O&amp;M</th>
               <th scope="col">Early Intervention</th>
             </tr>

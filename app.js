@@ -1,13 +1,18 @@
 import {
-  fallbackInText,
+  DEFAULT_YEAR,
+  ROLE_ORDER,
   indexOffices,
+  locateQuery,
   nearestPeople,
-  resolveOffline,
+  roleList,
 } from "./search.js";
 
 const form = document.querySelector("#search-form");
 const queryInput = document.querySelector("#q");
-const omInput = document.querySelector("#only-om");
+const yearInputs = [...document.querySelectorAll('input[name="year"]')];
+const roleInputs = ROLE_ORDER.map((role) =>
+  document.querySelector(`input[name="roles"][value="${role}"]`),
+).filter(Boolean);
 const eiInput = document.querySelector("#only-ei");
 const searchButton = document.querySelector("#search-button");
 const themeButton = document.querySelector("#theme");
@@ -17,7 +22,7 @@ const caption = document.querySelector("#results-caption");
 const rows = document.querySelector("#result-rows");
 const root = document.documentElement;
 
-/** @type {{people: Array<object>, omitted_people?: number} | null} */
+/** @type {{people: Array<object>, omitted_people?: number, omitted_note?: string, years?: Record<string, {omitted_note?: string}>} | null} */
 let directory = null;
 /** @type {Map<string, object> | null} */
 let offices = null;
@@ -118,22 +123,56 @@ function announce(message) {
   status.focus();
 }
 
+function selectedYear() {
+  const checked = yearInputs.find((input) => input.checked);
+  return checked ? checked.value : DEFAULT_YEAR;
+}
+
+function selectedRoles() {
+  return roleInputs.filter((input) => input.checked).map((input) => input.value);
+}
+
+function setYear(year) {
+  for (const input of yearInputs) {
+    input.checked = input.value === year;
+  }
+}
+
+function setRoles(roles) {
+  const wanted = new Set(roles);
+  for (const input of roleInputs) {
+    input.checked = wanted.has(input.value);
+  }
+}
+
+function omittedNote(year) {
+  if (!directory) {
+    return "";
+  }
+  const yearNote = directory.years?.[year]?.omitted_note;
+  if (typeof yearNote === "string" && yearNote) {
+    return yearNote;
+  }
+  return directory.omitted_note || "";
+}
+
 /**
- * @param {Array<{person: {name: string, om: string, ei: string, linkedin: string}, loc: {label: string}, miles: number, phone: string}>} ranked
+ * @param {Array<{person: {name: string, om: string, ei: string, linkedin: string, roles?: string[]}, loc: {label: string}, miles: number, phone: string}>} ranked
  * @param {string} placeLabel
- * @param {boolean} om
+ * @param {string} year
  * @param {boolean} ei
  * @param {string} prefix
  */
-function renderResults(ranked, placeLabel, om, ei, prefix) {
+function renderResults(ranked, placeLabel, year, ei, prefix) {
   clearRows();
-  const limitNote = limitPhrase(om, ei);
+  const yearLabel = year.replace("-", "–");
+  const eiNote = ei ? " listed for Early Intervention" : "";
   if (ranked.length === 0) {
-    caption.textContent = `No teachers near ${placeLabel}`;
-    announce(`${prefix}No teachers near ${placeLabel}${limitNote}.`.replace("  ", " "));
+    caption.textContent = `No people near ${placeLabel} for ${yearLabel}`;
+    announce(`${prefix}No people near ${placeLabel} for ${yearLabel}${eiNote}.`.replace("  ", " "));
     return;
   }
-  caption.textContent = `${ranked.length} ${ranked.length === 1 ? "teacher" : "teachers"} near ${placeLabel}`;
+  caption.textContent = `${ranked.length} ${ranked.length === 1 ? "person" : "people"} near ${placeLabel} for ${yearLabel}`;
   for (const row of ranked) {
     const tr = document.createElement("tr");
     const employer = document.createElement("th");
@@ -145,6 +184,7 @@ function renderResults(ranked, placeLabel, om, ei, prefix) {
       cellNode(profileNode(row.person.linkedin, row.person.name)),
       cellNode(phoneNode(row.phone)),
       cell(row.person.name),
+      cell(roleList(row.person.roles)),
       cell(row.person.om),
       cell(row.person.ei),
     );
@@ -152,7 +192,7 @@ function renderResults(ranked, placeLabel, om, ei, prefix) {
   }
   const closest = ranked[0].miles.toFixed(1);
   announce(
-    `${prefix}${ranked.length} ${ranked.length === 1 ? "teacher" : "teachers"} near ${placeLabel}${limitNote}. The closest office is ${closest} miles away.`,
+    `${prefix}${ranked.length} ${ranked.length === 1 ? "person" : "people"} near ${placeLabel} for ${yearLabel}${eiNote}. The closest office is ${closest} miles away.`,
   );
 }
 
@@ -175,81 +215,18 @@ function cellNode(node) {
 }
 
 /**
- * @param {boolean} om
+ * @param {string} query
+ * @param {string} year
+ * @param {string[]} roles
  * @param {boolean} ei
  */
-function limitPhrase(om, ei) {
-  if (om && ei) {
-    return " listed for orientation and mobility and Early Intervention";
-  }
-  if (om) {
-    return " listed for orientation and mobility";
-  }
-  if (ei) {
-    return " listed for Early Intervention";
-  }
-  return "";
-}
-
-/**
- * @param {string} query
- */
-async function locate(query) {
-  if (!places) {
-    return { status: "missing" };
-  }
-  const local = resolveOffline(query, places);
-  if (local.status !== "street") {
-    return local;
-  }
-  try {
-    const url = new URL("https://geocoding.geo.census.gov/geocoder/locations/onelineaddress");
-    url.searchParams.set("address", query);
-    url.searchParams.set("benchmark", "Public_AR_Current");
-    url.searchParams.set("format", "json");
-    const response = await fetch(url);
-    if (response.ok) {
-      const body = await response.json();
-      const matches = body?.result?.addressMatches ?? [];
-      for (const match of matches) {
-        if (match?.addressComponents?.state !== "IL") {
-          continue;
-        }
-        const lat = match?.coordinates?.y;
-        const lng = match?.coordinates?.x;
-        if (typeof lat !== "number" || typeof lng !== "number") {
-          continue;
-        }
-        return {
-          status: "ok",
-          lat,
-          lng,
-          label: match.matchedAddress || query,
-          how: "street",
-        };
-      }
-    }
-  } catch {
-    /* Fall through to the city or ZIP written in the same address. */
-  }
-  const fallback = fallbackInText(query, places);
-  if (fallback.status === "ok") {
-    return { ...fallback, how: "fallback" };
-  }
-  return fallback;
-}
-
-/**
- * @param {string} query
- * @param {boolean} om
- * @param {boolean} ei
- */
-async function search(query, om, ei) {
+async function search(query, year, roles, ei) {
   if (!directory || !offices || !places) {
     announce("The directory is still loading.");
     return;
   }
-  const origin = await locate(query);
+  omitted.textContent = omittedNote(year);
+  const origin = await locateQuery(query, places);
   if (origin.status === "ambiguous") {
     clearRows();
     caption.textContent = "More than one Illinois place matches";
@@ -263,12 +240,17 @@ async function search(query, om, ei) {
     announce("No Illinois city or ZIP code matched. Enter a city, a 5-digit ZIP code, or a street address in Illinois.");
     return;
   }
-  const ranked = nearestPeople(directory.people, offices, origin, { om, ei, limit: 10 });
+  const ranked = nearestPeople(directory.people, offices, origin, {
+    year,
+    roles,
+    ei,
+    limit: 10,
+  });
   const prefix =
     origin.how === "fallback"
       ? `The street lookup did not return an Illinois point. `
       : "";
-  renderResults(ranked, origin.label, om, ei, prefix);
+  renderResults(ranked, origin.label, year, ei, prefix);
 }
 
 form.addEventListener("submit", (event) => {
@@ -278,9 +260,21 @@ form.addEventListener("submit", (event) => {
     announce("Enter an Illinois city, ZIP code, or street address.");
     return;
   }
+  const year = selectedYear();
+  const roles = selectedRoles();
   const url = new URL(window.location.href);
   url.searchParams.set("q", query);
-  if (omInput.checked) {
+  if (year === DEFAULT_YEAR) {
+    url.searchParams.delete("year");
+  } else {
+    url.searchParams.set("year", year);
+  }
+  if (roles.length === 1 && roles[0] === "TVI") {
+    url.searchParams.delete("roles");
+  } else {
+    url.searchParams.set("roles", roles.join(","));
+  }
+  if (roles.length === 1 && roles[0] === "COMS") {
     url.searchParams.set("om", "1");
   } else {
     url.searchParams.delete("om");
@@ -291,7 +285,7 @@ form.addEventListener("submit", (event) => {
     url.searchParams.delete("ei");
   }
   window.history.replaceState(null, "", url);
-  search(query, omInput.checked, eiInput.checked);
+  search(query, year, roles, eiInput.checked);
 });
 
 searchButton.disabled = true;
@@ -302,22 +296,32 @@ Promise.all([loadJson("data/tvis.json"), loadJson("data/entities.json"), loadJso
     directory = tvis;
     offices = indexOffices(entities);
     places = locationFile;
-    if (tvis.omitted_note) {
-      omitted.textContent = tvis.omitted_note;
-    }
-    searchButton.disabled = false;
-    searchButton.textContent = "Search";
     const params = new URLSearchParams(window.location.search);
-    const query = params.get("q");
-    if (params.get("om") === "1") {
-      omInput.checked = true;
+    const year = params.get("year") === "2023-2024" ? "2023-2024" : DEFAULT_YEAR;
+    setYear(year);
+    const rolesParam = params.get("roles");
+    if (rolesParam) {
+      setRoles(
+        rolesParam
+          .split(",")
+          .map((role) => role.trim())
+          .filter((role) => ROLE_ORDER.includes(role)),
+      );
+    } else if (params.get("om") === "1") {
+      setRoles(["COMS"]);
+    } else {
+      setRoles(["TVI"]);
     }
     if (params.get("ei") === "1") {
       eiInput.checked = true;
     }
+    omitted.textContent = omittedNote(year);
+    searchButton.disabled = false;
+    searchButton.textContent = "Search";
+    const query = params.get("q");
     if (query) {
       queryInput.value = query;
-      search(query, omInput.checked, eiInput.checked);
+      search(query, selectedYear(), selectedRoles(), eiInput.checked);
     }
   })
   .catch(() => {

@@ -77,7 +77,16 @@ footer {
   margin: 0 auto;
 }
 
+.nav {
+  margin-bottom: 0;
+}
+
+.nav a {
+  color: var(--header-text);
+}
+
 h1,
+h2,
 p,
 fieldset,
 .field {
@@ -88,6 +97,16 @@ h1 {
   margin-bottom: 0.25rem;
   font-size: 2rem;
   line-height: 1.2;
+}
+
+h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.35rem;
+}
+
+h3 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1.1rem;
 }
 
 .edition {
@@ -214,6 +233,65 @@ tbody tr:nth-child(even) {
 
 footer {
   border-top: 1px solid var(--line);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.stat {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--line);
+}
+
+.stat p {
+  margin: 0;
+}
+
+.stat .value {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.map-wrap {
+  max-width: 28rem;
+}
+
+.map-wrap svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--line);
+  background: var(--bg);
+}
+
+.map-wrap path {
+  stroke: var(--line);
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+.map-wrap path:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: -3px;
+}
+
+.map-wrap path[aria-current="true"] {
+  stroke-width: 3;
+}
+
+.legend {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+#county-detail,
+#place-summary,
+#unplaced-groups {
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 40rem) {

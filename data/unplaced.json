@@ -1,0 +1,4486 @@
+{
+  "people": [
+    {
+      "id": "aaron-krogh",
+      "name": "Aaron Krogh",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "aaron-thurmond",
+      "name": "Aaron Thurmond",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "alana-rybak",
+      "name": "Alana Rybak",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "alex-gillaspie",
+      "name": "Alex Gillaspie",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "alexander-gabel",
+      "name": "Alexander Gabel",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "alexander-jones",
+      "name": "Alexander Jones",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "alexandra-bradstreet",
+      "name": "Alexandra Bradstreet",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "alison-mehler",
+      "name": "Alison Mehler",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "alison-serbin",
+      "name": "Alison Serbin",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "allison-heeren",
+      "name": "Allison Heeren",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "amanda-hetzel",
+      "name": "Amanda Hetzel",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "amy-szumny",
+      "name": "Amy Szumny",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "ana-saporito",
+      "name": "Ana Saporito",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "angela-hilson",
+      "name": "Angela Hilson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "anne-dansdill",
+      "name": "Anne Dansdill",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "annette-muffler",
+      "name": "Annette Muffler",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "anthony-cleveland",
+      "name": "Anthony Cleveland",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "ashley-ball",
+      "name": "Ashley Ball",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "ashley-bement",
+      "name": "Ashley Bement",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "aubrey-drew",
+      "name": "Aubrey Drew",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "barbara-french",
+      "name": "Barbara French",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "barbara-wichner",
+      "name": "Barbara Wichner",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "beth-basargin",
+      "name": "Beth Basargin",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "bethany-pritchard",
+      "name": "Bethany Pritchard",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "beverly-jackson",
+      "name": "Beverly Jackson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "bobette-platt",
+      "name": "Bobette Platt",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "brendan-byrne",
+      "name": "Brendan Byrne",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "brennan-kelly",
+      "name": "Brennan Kelly",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "britt-reel",
+      "name": "Britt Reel",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "caitlyn-engel",
+      "name": "Caitlyn Engel",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "carla-beck",
+      "name": "Carla Beck",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "carly-reddy",
+      "name": "Carly Reddy",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "carolyn-ray",
+      "name": "Carolyn Ray",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "cassandra-bordenkircher",
+      "name": "Cassandra Bordenkircher",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "charles-brancheau",
+      "name": "Charles Brancheau",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "charlotte-skocz",
+      "name": "Charlotte Skocz",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "charlotte-wagner",
+      "name": "Charlotte Wagner",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "charyn-beaumont",
+      "name": "Charyn Beaumont",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "cherise-jerrard",
+      "name": "Cherise Jerrard",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "cherise-novak",
+      "name": "Cherise Novak",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "cheryl-calame",
+      "name": "Cheryl Calame",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "christina-delbridge",
+      "name": "Christina Delbridge",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "christine-fair",
+      "name": "Christine Fair",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "christine-kath",
+      "name": "Christine Kath",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "christine-o-neill",
+      "name": "Christine O'Neill",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "christine-marie-youssef",
+      "name": "Christine-Marie Youssef",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "clinton-enyinnaya",
+      "name": "Clinton Enyinnaya",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "cody-froeter",
+      "name": "Cody Froeter",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "colleen-dressler",
+      "name": "Colleen Dressler",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "corie-gallagher",
+      "name": "Corie Gallagher",
+      "roles": [
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "corinne-nero",
+      "name": "Corinne Nero",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "cynthia-cassidy",
+      "name": "Cynthia Cassidy",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "cynthia-miller",
+      "name": "Cynthia Miller",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "cynthia-stern",
+      "name": "Cynthia Stern",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "dan-thompson",
+      "name": "Dan Thompson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "dana-brosso",
+      "name": "Dana Brosso",
+      "roles": [
+        "CATIS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "daniel-smith",
+      "name": "Daniel Smith",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "daniela-becerra",
+      "name": "Daniela Becerra",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "david-johnson",
+      "name": "David Johnson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "dayna-brzezowski",
+      "name": "Dayna Brzezowski",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "debora-gosnell",
+      "name": "Debora Gosnell",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "deborah-augustine",
+      "name": "Deborah Augustine",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "deborah-cairncross",
+      "name": "Deborah Cairncross",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "deborah-faynik",
+      "name": "Deborah Faynik",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "deborah-oates",
+      "name": "Deborah Oates",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "debra-dalton",
+      "name": "Debra Dalton",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "debra-marco",
+      "name": "Debra Marco",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "debra-rettig",
+      "name": "Debra Rettig",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "debra-scott",
+      "name": "Debra Scott",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "debra-siegel",
+      "name": "Debra Siegel",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "delaney-burns",
+      "name": "Delaney Burns",
+      "roles": [
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "denise-crowley",
+      "name": "Denise Crowley",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "denise-eliopulos",
+      "name": "Denise Eliopulos",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "diane-haisch",
+      "name": "Diane Haisch",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "donald-kording",
+      "name": "Donald Kording",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "donna-noonan",
+      "name": "Donna Noonan",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "donna-o-hagan",
+      "name": "Donna O'Hagan",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "donna-white-richardson",
+      "name": "Donna White-Richardson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "douglas-anzlovar",
+      "name": "Douglas Anzlovar",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "elissa-heibel",
+      "name": "Elissa Heibel",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "elizabeth-bruozis",
+      "name": "Elizabeth Bruozis",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "elizabeth-ivansek",
+      "name": "Elizabeth Ivansek",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "elizabeth-jensen",
+      "name": "Elizabeth Jensen",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "elizabeth-petitt",
+      "name": "Elizabeth Petitt",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "elizabeth-shiel",
+      "name": "Elizabeth Shiel",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "elizabeth-wetherell",
+      "name": "Elizabeth Wetherell",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "emily-traylor",
+      "name": "Emily Traylor",
+      "roles": [
+        "TVI",
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "eric-boklage",
+      "name": "Eric Boklage",
+      "roles": [
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "eric-briscoe",
+      "name": "Eric Briscoe",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "eric-olson",
+      "name": "Eric Olson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "eric-ott",
+      "name": "Eric Ott",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "erin-purser",
+      "name": "Erin Purser",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "eva-golembiewski",
+      "name": "Eva Golembiewski",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "faheem-hashmee",
+      "name": "Faheem Hashmee",
+      "roles": [
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "fritz-newman",
+      "name": "Fritz Newman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "gary-wittbrodt",
+      "name": "Gary Wittbrodt",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "geo-athappilly",
+      "name": "Geo Athappilly",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "gina-carr",
+      "name": "Gina Carr",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "gina-hubberts",
+      "name": "Gina Hubberts",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "gloria-goss-harris",
+      "name": "Gloria Goss-Harris",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "grace-townsend",
+      "name": "Grace Townsend",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "gracelyn-berry",
+      "name": "Gracelyn Berry",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "gwynne-ogi",
+      "name": "Gwynne Ogi",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "hannah-schuler",
+      "name": "Hannah Schuler",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "harry-ostrov",
+      "name": "Harry Ostrov",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "heather-stout",
+      "name": "Heather Stout",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "isaac-singer",
+      "name": "Isaac Singer",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jackie-macy",
+      "name": "Jackie Macy",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jacqueline-bing",
+      "name": "Jacqueline Bing",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jacqueline-rickman",
+      "name": "Jacqueline Rickman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jacquelyn-jackson",
+      "name": "Jacquelyn Jackson",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jana-mccracken",
+      "name": "Jana McCracken",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "jane-breen",
+      "name": "Jane Breen",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jane-freiburger",
+      "name": "Jane Freiburger",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jane-o-donnell",
+      "name": "Jane O'Donnell",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jane-ryan",
+      "name": "Jane Ryan",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "janet-barnard",
+      "name": "Janet Barnard",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "janet-ichida",
+      "name": "Janet Ichida",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "janet-jones",
+      "name": "Janet Jones",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "janet-spivey",
+      "name": "Janet Spivey",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "janice-riley",
+      "name": "Janice Riley",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "janine-paoletti",
+      "name": "Janine Paoletti",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jaret-bozigian",
+      "name": "Jaret Bozigian",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jason-wiedman",
+      "name": "Jason Wiedman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jaylan-el-sherif",
+      "name": "Jaylan El-Sherif",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jayme-weyrauch",
+      "name": "Jayme Weyrauch",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jen-perkins",
+      "name": "Jen Perkins",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jennifer-duncan",
+      "name": "Jennifer Duncan",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jennifer-freeman",
+      "name": "Jennifer Freeman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jennifer-gendeman",
+      "name": "Jennifer Gendeman",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jennifer-jackson",
+      "name": "Jennifer Jackson",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "jennifer-molodecki",
+      "name": "Jennifer Molodecki",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jeri-klemenc",
+      "name": "Jeri Klemenc",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jermaine-milledge",
+      "name": "Jermaine Milledge",
+      "roles": [
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jessica-duer",
+      "name": "Jessica Duer",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jessica-exline",
+      "name": "Jessica Exline",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jill-punter",
+      "name": "Jill Punter",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jill-thomas",
+      "name": "Jill Thomas",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "joanne-jeffrey",
+      "name": "JoAnne Jeffrey",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "john-donoval",
+      "name": "John Donoval",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "john-walker",
+      "name": "John Walker",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "jonetta-irons",
+      "name": "Jonetta Irons",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "joseph-jorgenson",
+      "name": "Joseph Jorgenson",
+      "roles": [
+        "COMS",
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "joseph-loch",
+      "name": "Joseph Loch",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "joshua-dugan",
+      "name": "Joshua Dugan",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "joyce-strother",
+      "name": "Joyce Strother",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "judith-danaher",
+      "name": "Judith Danaher",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "judith-greene",
+      "name": "Judith Greene",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "julie-adams",
+      "name": "Julie Adams",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "julie-swegle",
+      "name": "Julie Swegle",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "julie-yglesias",
+      "name": "Julie Yglesias",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "juliene-mccormick",
+      "name": "Juliene McCormick",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "justin-gronko",
+      "name": "Justin Gronko",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "karalyn-deconinck",
+      "name": "Karalyn Deconinck",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "karen-chlapecka",
+      "name": "Karen Chlapecka",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "karen-larson-ford",
+      "name": "Karen Larson-Ford",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "karin-trost",
+      "name": "Karin Trost",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kateri-gullifor",
+      "name": "Kateri Gullifor",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "katherin-konstant",
+      "name": "Katherin Konstant",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kathleen-hughes",
+      "name": "Kathleen Hughes",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kathleen-miller-faber",
+      "name": "Kathleen Miller-Faber",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kathleen-ray",
+      "name": "Kathleen Ray",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kathleen-spengler",
+      "name": "Kathleen Spengler",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kathryn-turner",
+      "name": "Kathryn Turner",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "katrina-best",
+      "name": "Katrina Best",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kaycee-struck",
+      "name": "Kaycee Struck",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kayla-riney",
+      "name": "Kayla Riney",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "keely-moran",
+      "name": "Keely Moran",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kelly-cullen",
+      "name": "Kelly Cullen",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kelly-krispinsky",
+      "name": "Kelly Krispinsky",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kelsey-gosch",
+      "name": "Kelsey Gosch",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kimberly-nelson",
+      "name": "Kimberly Nelson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kirstin-peahl",
+      "name": "Kirstin Peahl",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "klaus-mittelstadt",
+      "name": "Klaus Mittelstadt",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kristen-imbus",
+      "name": "Kristen Imbus",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kristi-probst",
+      "name": "Kristi Probst",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kristina-papish",
+      "name": "Kristina Papish",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kristina-smith",
+      "name": "Kristina Smith",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kristina-sutton",
+      "name": "Kristina Sutton",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "kya-cain",
+      "name": "Kya Cain",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "laura-casey",
+      "name": "Laura Casey",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "laura-gaynor",
+      "name": "Laura Gaynor",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "laura-taylor",
+      "name": "Laura Taylor",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "lauralyn-randles",
+      "name": "Lauralyn Randles",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "laurel-miller",
+      "name": "Laurel Miller",
+      "roles": [
+        "COMS",
+        "CATIS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "lauren-mccarthy",
+      "name": "Lauren McCarthy",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "lauren-nguyen",
+      "name": "Lauren Nguyen",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "leah-phillips",
+      "name": "Leah Phillips",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "leeanne-pulvermacher",
+      "name": "Leeanne Pulvermacher",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "linda-feleky",
+      "name": "Linda Feleky",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "lisa-floyd",
+      "name": "Lisa Floyd",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "lisa-meadors",
+      "name": "Lisa Meadors",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "lisa-tabaka",
+      "name": "Lisa Tabaka",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "louise-schuldt",
+      "name": "Louise Schuldt",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "luke-scriven",
+      "name": "Luke Scriven",
+      "roles": [
+        "CATIS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "lynnette-newton",
+      "name": "Lynnette Newton",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "madeline-geisel",
+      "name": "Madeline Geisel",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "marcella-beisiegel-clausen",
+      "name": "Marcella Beisiegel-Clausen",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "marcia-harris",
+      "name": "Marcia Harris",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "margaret-elgersma",
+      "name": "Margaret Elgersma",
+      "roles": [
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "maria-kays",
+      "name": "Maria Kays",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "maria-mazzini",
+      "name": "Maria Mazzini",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "marian-garcia",
+      "name": "Marian Garcia",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "mariana-esparza",
+      "name": "Mariana Esparza",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "marie-ellis",
+      "name": "Marie Ellis",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "marijke-bakker",
+      "name": "Marijke Bakker",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "marilyn-murphy",
+      "name": "Marilyn Murphy",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "marjon-vandezande",
+      "name": "Marjon VandeZande",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "marjorie-keller",
+      "name": "Marjorie Keller",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "mark-renc",
+      "name": "Mark Renc",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "mary-curran",
+      "name": "Mary Curran",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "mary-drobnik",
+      "name": "Mary Drobnik",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "mary-elliott",
+      "name": "Mary Elliott",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "mary-govertsen",
+      "name": "Mary Govertsen",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "mary-hanson",
+      "name": "Mary Hanson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "mary-neubeck",
+      "name": "Mary Neubeck",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "mary-peura",
+      "name": "Mary Peura",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "mary-yearwood",
+      "name": "Mary Yearwood",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "marybeth-enright",
+      "name": "Marybeth Enright",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "mashi-kaufman",
+      "name": "Mashi Kaufman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "maureen-francis",
+      "name": "Maureen Francis",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "meggan-larocco",
+      "name": "Meggan LaRocco",
+      "roles": [
+        "COMS",
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "meghan-fredel",
+      "name": "Meghan Fredel",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "meghan-greenwell",
+      "name": "Meghan Greenwell",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "melissa-hopkins",
+      "name": "Melissa Hopkins",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "melissa-jackson",
+      "name": "Melissa Jackson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "melissa-ruebe",
+      "name": "Melissa Ruebe",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "michael-foster",
+      "name": "Michael Foster",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michael-mccarthy",
+      "name": "Michael McCarthy",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michael-tucci",
+      "name": "Michael Tucci",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michele-glen",
+      "name": "Michele Glen",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "michele-valecek",
+      "name": "Michele Valecek",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "michelle-peterson",
+      "name": "Michelle Peterson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "michelle-quinn",
+      "name": "Michelle Quinn",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michelle-robinson",
+      "name": "Michelle Robinson",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "monica-vandeven",
+      "name": "Monica Vandeven",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "nancy-mcguire",
+      "name": "Nancy Mc Guire",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "naomi-hershman",
+      "name": "Naomi Hershman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "naomi-read-franzblau",
+      "name": "Naomi Read Franzblau",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "natalia-mcmahan",
+      "name": "Natalia McMahan",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "nathalie-timmons",
+      "name": "Nathalie Timmons",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "nettie-vaughn",
+      "name": "Nettie Vaughn",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "noah-tavor",
+      "name": "Noah Tavor",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "patricia-buhrow",
+      "name": "Patricia Buhrow",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "patricia-colella",
+      "name": "Patricia Colella",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "patricia-fischer",
+      "name": "Patricia Fischer",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "patricia-gurnsey",
+      "name": "Patricia Gurnsey",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "patricia-noonan",
+      "name": "Patricia Noonan",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "patricia-turner",
+      "name": "Patricia Turner",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "patricia-von-hagel",
+      "name": "Patricia Von Hagel",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "patrick-dugan",
+      "name": "Patrick Dugan",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "patrick-zeinstra",
+      "name": "Patrick Zeinstra",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "peggy-coleman-jeffries",
+      "name": "Peggy Coleman-Jeffries",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "peter-heavern",
+      "name": "Peter Heavern",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "rachael-richardson",
+      "name": "Rachael Richardson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "rachel-bell",
+      "name": "Rachel Bell",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "rachel-dufresne",
+      "name": "Rachel DuFresne",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "rachel-jang",
+      "name": "Rachel Jang",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "raven-wilson",
+      "name": "Raven Wilson",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "rebecca-blair",
+      "name": "Rebecca Blair",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "rebecca-burns",
+      "name": "Rebecca Burns",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "rebecca-kelley",
+      "name": "Rebecca Kelley",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "rebecca-lambert",
+      "name": "Rebecca Lambert",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "rebecka-baecker",
+      "name": "Rebecka Baecker",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "richard-schultz",
+      "name": "Richard Schultz",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "rita-hastie",
+      "name": "Rita Hastie",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "robert-blomgren",
+      "name": "Robert Blomgren",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "roberta-kocim",
+      "name": "Roberta Kocim",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "rosalynne-halpin",
+      "name": "Rosalynne Halpin",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "ruth-durling",
+      "name": "Ruth Durling",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "ryan-shimshock",
+      "name": "Ryan Shimshock",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sallie-case",
+      "name": "Sallie Case",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "samantha-baiardo",
+      "name": "Samantha Baiardo",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sandra-lagomarcino",
+      "name": "Sandra Lagomarcino",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sandra-luskin",
+      "name": "Sandra Luskin",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sandra-poorman",
+      "name": "Sandra Poorman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sara-edwards",
+      "name": "Sara Edwards",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sara-golub",
+      "name": "Sara Golub",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sara-heatherly",
+      "name": "Sara Heatherly",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sara-wells",
+      "name": "Sara Wells",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sara-wylie",
+      "name": "Sara Wylie",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sarah-appler",
+      "name": "Sarah Appler",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sarah-mason",
+      "name": "Sarah Mason",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sarah-milledge",
+      "name": "Sarah Milledge",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "scott-cairncross",
+      "name": "Scott Cairncross",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "scott-sayers",
+      "name": "Scott Sayers",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "scott-smith",
+      "name": "Scott Smith",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "sean-johnson",
+      "name": "Sean Johnson",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sharon-jackson-swiercz",
+      "name": "Sharon Jackson-Swiercz",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sharon-novak",
+      "name": "Sharon Novak",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sharon-wimmer",
+      "name": "Sharon Wimmer",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sheila-epstein",
+      "name": "Sheila Epstein",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "shelle-hamer",
+      "name": "Shelle Hamer",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sherrie-broughton",
+      "name": "Sherrie Broughton",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "shirley-dale",
+      "name": "Shirley Dale",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "siobhan-midgley",
+      "name": "Siobhan Midgley",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "stacy-kelly",
+      "name": "Stacy Kelly",
+      "roles": [
+        "TVI",
+        "COMS",
+        "CATIS"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "stephanie-anderson",
+      "name": "Stephanie Anderson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "stephanie-buonocore",
+      "name": "Stephanie Buonocore",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "stephen-mcauliff",
+      "name": "Stephen McAuliff",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "stephen-pohl",
+      "name": "Stephen Pohl",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sudhakar-pisipati",
+      "name": "Sudhakar Pisipati",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sueann-barrett",
+      "name": "Sueann Barrett",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "sulejman-karic",
+      "name": "Sulejman Karic",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "susan-hall",
+      "name": "Susan Hall",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "susan-layden",
+      "name": "Susan Layden",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "susan-uthup",
+      "name": "Susan Uthup",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "susan-wade",
+      "name": "Susan Wade",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "susan-wulff",
+      "name": "Susan Wulff",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "taurus-smith",
+      "name": "Taurus Smith",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "teresa-scott",
+      "name": "Teresa Scott",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "thomas-van-koevering",
+      "name": "Thomas Van Koevering",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "tiffany-sanders",
+      "name": "Tiffany Sanders",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "timothy-bauman",
+      "name": "Timothy Bauman",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2023-2024",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "tommie-roesch",
+      "name": "Tommie Roesch",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "vicki-greene",
+      "name": "Vicki Greene",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "vicki-koresch",
+      "name": "Vicki Koresch",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "victoria-mullis",
+      "name": "Victoria Mullis",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "wendy-morrison",
+      "name": "Wendy Morrison",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "wendy-olson",
+      "name": "Wendy Olson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "yokasta-urena",
+      "name": "Yokasta Urena",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "yvonne-caruthers-williams",
+      "name": "Yvonne Caruthers-Williams",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2023-2024",
+      "tvi": true,
+      "reason": "No district or school on the 2023–2024 log"
+    },
+    {
+      "id": "aaron-thurmond",
+      "name": "Aaron Thurmond",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "alana-rybak",
+      "name": "Alana Rybak",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "alex-gillaspie",
+      "name": "Alex Gillaspie",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "alexander-gabel",
+      "name": "Alexander Gabel",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "alexander-jones",
+      "name": "Alexander Jones",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "amanda-hetzel",
+      "name": "Amanda Hetzel",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "amy-szumny",
+      "name": "Amy Szumny",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "anthony-cleveland",
+      "name": "Anthony Cleveland",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "ashley-bement",
+      "name": "Ashley Bement",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "barbara-french",
+      "name": "Barbara French",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "barbara-wichner",
+      "name": "Barbara Wichner",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "brendan-byrne",
+      "name": "Brendan Byrne",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "brennan-kelly",
+      "name": "Brennan Kelly",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "caitlyn-engel",
+      "name": "Caitlyn Engel",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "carly-reddy",
+      "name": "Carly Reddy",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "catherine-courtney",
+      "name": "Catherine Courtney",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "charles-brancheau",
+      "name": "Charles Brancheau",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "charlotte-wagner",
+      "name": "Charlotte Wagner",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "charyn-beaumont",
+      "name": "Charyn Beaumont",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "cherise-novak",
+      "name": "Cherise Novak",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "christina-delbridge",
+      "name": "Christina Delbridge",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "christine-kath",
+      "name": "Christine Kath",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "clinton-enyinnaya",
+      "name": "Clinton Enyinnaya",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "cody-froeter",
+      "name": "Cody Froeter",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "corie-gallagher",
+      "name": "Corie Gallagher",
+      "roles": [
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "corinne-nero",
+      "name": "Corinne Nero",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "dana-brosso",
+      "name": "Dana Brosso",
+      "roles": [
+        "CATIS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "daniel-smith",
+      "name": "Daniel Smith",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "darla-chambers",
+      "name": "Darla Chambers",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "dayna-brzezowski",
+      "name": "Dayna Brzezowski",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "delaney-burns",
+      "name": "Delaney Burns",
+      "roles": [
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "elizabeth-ivansek",
+      "name": "Elizabeth Ivansek",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "emily-traylor",
+      "name": "Emily Traylor",
+      "roles": [
+        "TVI",
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "eric-boklage",
+      "name": "Eric Boklage",
+      "roles": [
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "eric-ott",
+      "name": "Eric Ott",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "erin-purser",
+      "name": "Erin Purser",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "faheem-hashmee",
+      "name": "Faheem Hashmee",
+      "roles": [
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "gary-wittbrodt",
+      "name": "Gary Wittbrodt",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "geo-athappilly",
+      "name": "Geo Athappilly",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "gina-carr",
+      "name": "Gina Carr",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "grace-townsend",
+      "name": "Grace Townsend",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "hannah-schuler",
+      "name": "Hannah Schuler",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "heather-stout",
+      "name": "Heather Stout",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jackie-macy",
+      "name": "Jackie Macy",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jaret-bozigian",
+      "name": "Jaret Bozigian",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jasmine-wells",
+      "name": "Jasmine Wells",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "jayme-weyrauch",
+      "name": "Jayme Weyrauch",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jen-perkins",
+      "name": "Jen Perkins",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jennifer-gendeman",
+      "name": "Jennifer Gendeman",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jennifer-jackson",
+      "name": "Jennifer Jackson",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "jennifer-molodecki",
+      "name": "Jennifer Molodecki",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jermaine-milledge",
+      "name": "Jermaine Milledge",
+      "roles": [
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "jessica-duer",
+      "name": "Jessica Duer",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "john-donoval",
+      "name": "John Donoval",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "joseph-jorgenson",
+      "name": "Joseph Jorgenson",
+      "roles": [
+        "COMS",
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "joshua-dugan",
+      "name": "Joshua Dugan",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "judith-danaher",
+      "name": "Judith Danaher",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "julia-bowman",
+      "name": "Julia Bowman",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "julie-adams",
+      "name": "Julie Adams",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "julie-yglesias",
+      "name": "Julie Yglesias",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "justin-gronko",
+      "name": "Justin Gronko",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "karalyn-deconinck",
+      "name": "Karalyn Deconinck",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kathleen-spengler",
+      "name": "Kathleen Spengler",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "keely-moran",
+      "name": "Keely Moran",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kelly-krispinsky",
+      "name": "Kelly Krispinsky",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kirstin-peahl",
+      "name": "Kirstin Peahl",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "klaus-mittelstadt",
+      "name": "Klaus Mittelstadt",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "kya-cain",
+      "name": "Kya Cain",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "laura-gaynor",
+      "name": "Laura Gaynor",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "laurel-miller",
+      "name": "Laurel Miller",
+      "roles": [
+        "COMS",
+        "CATIS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "lauren-mccarthy",
+      "name": "Lauren McCarthy",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "lauren-nguyen",
+      "name": "Lauren Nguyen",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "luke-scriven",
+      "name": "Luke Scriven",
+      "roles": [
+        "CATIS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "marcia-harris",
+      "name": "Marcia Harris",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "margaret-elgersma",
+      "name": "Margaret Elgersma",
+      "roles": [
+        "CLVT",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "mariana-esparza",
+      "name": "Mariana Esparza",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "marjon-vandezande",
+      "name": "Marjon VandeZande",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "mark-renc",
+      "name": "Mark Renc",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "mary-elliott",
+      "name": "Mary Elliott",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "maureen-francis",
+      "name": "Maureen Francis",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "meggan-larocco",
+      "name": "Meggan LaRocco",
+      "roles": [
+        "COMS",
+        "CATIS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michael-foster",
+      "name": "Michael Foster",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michael-mccarthy",
+      "name": "Michael McCarthy",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michael-tucci",
+      "name": "Michael Tucci",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michelle-quinn",
+      "name": "Michelle Quinn",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "michelle-robinson",
+      "name": "Michelle Robinson",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "monica-vandeven",
+      "name": "Monica Vandeven",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "nathan-lawson",
+      "name": "Nathan Lawson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "noah-tavor",
+      "name": "Noah Tavor",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "patricia-noonan",
+      "name": "Patricia Noonan",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "patrick-zeinstra",
+      "name": "Patrick Zeinstra",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "peter-heavern",
+      "name": "Peter Heavern",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "rachael-richardson",
+      "name": "Rachael Richardson",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "raven-wilson",
+      "name": "Raven Wilson",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "rebecca-andrew",
+      "name": "Rebecca Andrew",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "rebecca-kelley",
+      "name": "Rebecca Kelley",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "robert-blomgren",
+      "name": "Robert Blomgren",
+      "roles": [
+        "TVI",
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "No confident public office match"
+    },
+    {
+      "id": "rosalynne-halpin",
+      "name": "Rosalynne Halpin",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "ryan-shimshock",
+      "name": "Ryan Shimshock",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "samantha-baiardo",
+      "name": "Samantha Baiardo",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sara-edwards",
+      "name": "Sara Edwards",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "sara-heatherly",
+      "name": "Sara Heatherly",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sara-roy",
+      "name": "Sara Roy",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "sarah-appler",
+      "name": "Sarah Appler",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sarah-milledge",
+      "name": "Sarah Milledge",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "scott-cairncross",
+      "name": "Scott Cairncross",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "scott-sayers",
+      "name": "Scott Sayers",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "scott-smith",
+      "name": "Scott Smith",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "Employer needs a hand check"
+    },
+    {
+      "id": "sean-johnson",
+      "name": "Sean Johnson",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "siobhan-midgley",
+      "name": "Siobhan Midgley",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "stephanie-provence",
+      "name": "Stephanie Provence",
+      "roles": [
+        "TVI"
+      ],
+      "year": "2024-2025",
+      "tvi": true,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "stephen-mcauliff",
+      "name": "Stephen McAuliff",
+      "roles": [
+        "COMS",
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sudhakar-pisipati",
+      "name": "Sudhakar Pisipati",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "sulejman-karic",
+      "name": "Sulejman Karic",
+      "roles": [
+        "COMS",
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "susan-uthup",
+      "name": "Susan Uthup",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "Department of Human Services is not used as a map point"
+    },
+    {
+      "id": "taurus-smith",
+      "name": "Taurus Smith",
+      "roles": [
+        "CVRT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "teresa-scott",
+      "name": "Teresa Scott",
+      "roles": [
+        "CLVT"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "thomas-van-koevering",
+      "name": "Thomas Van Koevering",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    },
+    {
+      "id": "timothy-bauman",
+      "name": "Timothy Bauman",
+      "roles": [
+        "COMS"
+      ],
+      "year": "2024-2025",
+      "tvi": false,
+      "reason": "No public employer on either log"
+    }
+  ]
+}

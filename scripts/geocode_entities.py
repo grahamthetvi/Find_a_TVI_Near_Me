@@ -21,20 +21,28 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.downloads import download, fetch_json
-from scripts.sources import load_coms, load_current, load_prior
+from scripts.sources import (
+    load_catis,
+    load_clvt,
+    load_coms,
+    load_current,
+    load_cvrt,
+    load_prior,
+)
 from scripts.tvi_data import (
     NCES_SOURCE,
     county_key,
     district_numbers,
     expand_name,
     in_illinois,
+    iter_years,
+    lea_kind,
     load_overrides,
     load_roes,
     match_employer,
     match_school,
     plan_people,
     write_json,
-    lea_kind,
 )
 
 LEA_QUERY = (
@@ -302,6 +310,9 @@ def main() -> None:
         load_coms(raw / "Illinois_COMS_govsalaries.xlsx"),
         roes,
         load_overrides(ROOT / "data" / "overrides.json"),
+        load_catis(raw / "Illinois_CATIS_govsalaries.xlsx"),
+        load_clvt(raw / "Illinois_CLVT_govsalaries.xlsx"),
+        load_cvrt(raw / "Illinois_CVRT_govsalaries.xlsx"),
     )
     print("Downloading Illinois district and school locations from NCES...")
     ipeds = load_ipeds(ROOT / "data" / "source" / "HD2024.zip")
@@ -318,123 +329,134 @@ def main() -> None:
     seen_employers: set[str] = set()
 
     for person in people:
-        for employer in person["employers"]:  # type: ignore[union-attr]
-            office_id = str(employer["office_id"])
-            if office_id in seen_employers or employer["is_dhs"]:
+        for year_data in iter_years(person):
+            for employer in year_data.get("employers") or []:  # type: ignore[union-attr]
+                office_id = str(employer["office_id"])
+                if office_id in seen_employers or employer["is_dhs"]:
+                    seen_employers.add(office_id)
+                    continue
                 seen_employers.add(office_id)
-                continue
-            seen_employers.add(office_id)
-            name = str(employer["name"])
-            county = str(employer["county"])
-            matched = match_employer(name, county, leas)
-            if matched is not None:
-                cache[office_id] = _cache_record(
-                    lea_kind(str(matched["name"])),
-                    float(matched["lat"]),
-                    float(matched["lng"]),
-                    str(matched.get("address") or ""),
-                    NCES_SOURCE,
-                    str(matched["name"]),
-                    str(matched.get("county") or ""),
-                    str(matched.get("leaid") or ""),
+                name = str(employer["name"])
+                county = str(employer["county"])
+                matched = match_employer(name, county, leas)
+                if matched is not None:
+                    cache[office_id] = _cache_record(
+                        lea_kind(str(matched["name"])),
+                        float(matched["lat"]),
+                        float(matched["lng"]),
+                        str(matched.get("address") or ""),
+                        NCES_SOURCE,
+                        str(matched["name"]),
+                        str(matched.get("county") or ""),
+                        str(matched.get("leaid") or ""),
+                    )
+                    employer_leas[office_id] = matched
+                    if expand_name(name) == matched.get("expanded"):
+                        exact += 1
+                    else:
+                        fuzzy.append(f"{name} ({county}) -> {matched['name']}")
+                    continue
+                ipeds_name = IPEDS_MATCH.get(expand_name(name))
+                institution = ipeds.get(ipeds_name) if ipeds_name else None
+                if institution is not None:
+                    cache[office_id] = _cache_record(
+                        "campus",
+                        float(institution["lat"]),
+                        float(institution["lng"]),
+                        str(institution["address"]),
+                        IPEDS_PAGE,
+                        str(institution["name"]),
+                        county_key(county),
+                    )
+                    print(f"campus: {name} -> {institution['name']}, {institution['address']}")
+                    continue
+                campus = next(
+                    (item for item in CAMPUSES if item["match"] == expand_name(name)),
+                    None,
                 )
-                employer_leas[office_id] = matched
-                if expand_name(name) == matched.get("expanded"):
-                    exact += 1
-                else:
-                    fuzzy.append(f"{name} ({county}) -> {matched['name']}")
-                continue
-            ipeds_name = IPEDS_MATCH.get(expand_name(name))
-            institution = ipeds.get(ipeds_name) if ipeds_name else None
-            if institution is not None:
+                if campus is None:
+                    continue
+                point = census_point(campus["address"], campus["city"])
+                if point is None:
+                    campus_misses.append(name)
+                    continue
+                lat, lng, matched_address = point
                 cache[office_id] = _cache_record(
                     "campus",
-                    float(institution["lat"]),
-                    float(institution["lng"]),
-                    str(institution["address"]),
-                    IPEDS_PAGE,
-                    str(institution["name"]),
+                    lat,
+                    lng,
+                    matched_address,
+                    campus["source_url"],
+                    name,
                     county_key(county),
                 )
-                print(f"campus: {name} -> {institution['name']}, {institution['address']}")
-                continue
-            campus = next(
-                (item for item in CAMPUSES if item["match"] == expand_name(name)),
-                None,
-            )
-            if campus is None:
-                continue
-            point = census_point(campus["address"], campus["city"])
-            if point is None:
-                campus_misses.append(name)
-                continue
-            lat, lng, matched_address = point
-            cache[office_id] = _cache_record(
-                "campus",
-                lat,
-                lng,
-                matched_address,
-                campus["source_url"],
-                name,
-                county_key(county),
-            )
-            print(f"campus: {name} -> {matched_address}")
+                print(f"campus: {name} -> {matched_address}")
 
     school_hits = 0
     school_misses = 0
     seen_schools: set[str] = set()
     for person in people:
-        employer_ids = [
-            str(item["leaid"])
-            for employer in person["employers"]  # type: ignore[union-attr]
-            if not employer["is_dhs"]
-            for item in [employer_leas.get(str(employer["office_id"]))]
-            if item and item.get("leaid")
-        ]
-        for school in person["schools"]:  # type: ignore[union-attr]
-            office_id = str(school["office_id"])
-            if office_id in seen_schools:
-                continue
-            seen_schools.add(office_id)
-            candidate_ids = list(employer_ids)
-            district = str(school.get("district") or "")
-            hint = str(school.get("county_hint") or "")
-            if district:
-                district_match = match_employer(district, hint, leas) if hint else None
-                if district_match is None and not hint:
-                    expanded = expand_name(district)
-                    exact_leas = [lea for lea in leas if lea.get("expanded") == expanded]
-                    if len(exact_leas) == 1:
-                        district_match = exact_leas[0]
-                if district_match and district_match.get("leaid"):
-                    candidate_ids.append(str(district_match["leaid"]))
-            pool: list[dict[str, object]] = []
-            seen_pool: set[str] = set()
-            for leaid in candidate_ids:
-                for building in schools.get(leaid, []):
-                    ncessch = str(building.get("ncessch") or "")
-                    if ncessch in seen_pool:
-                        continue
-                    seen_pool.add(ncessch)
-                    pool.append(building)
-            matched_school = match_school(str(school["site"]), pool) if pool else None
-            if matched_school is None:
-                school_misses += 1
-                print(f"  unmatched school: {school['site']} | {school.get('district') or school.get('label_employer')}")
-                continue
-            school_hits += 1
-            if expand_name(str(school["site"])) != matched_school.get("expanded"):
-                print(f"  school: {school['site']} -> {matched_school['name']}")
-            cache[office_id] = _cache_record(
-                "school",
-                float(matched_school["lat"]),
-                float(matched_school["lng"]),
-                str(matched_school.get("address") or ""),
-                NCES_SOURCE,
-                str(matched_school["name"]),
-                str(matched_school.get("county") or ""),
-                str(matched_school.get("leaid") or ""),
-            )
+        for year_data in iter_years(person):
+            employers = year_data.get("employers") or []
+            employer_ids = [
+                str(item["leaid"])
+                for employer in employers  # type: ignore[union-attr]
+                if not employer["is_dhs"]
+                for item in [employer_leas.get(str(employer["office_id"]))]
+                if item and item.get("leaid")
+            ]
+            for school in year_data.get("schools") or []:  # type: ignore[union-attr]
+                office_id = str(school["office_id"])
+                if office_id in seen_schools:
+                    continue
+                seen_schools.add(office_id)
+                candidate_ids = list(employer_ids)
+                district = str(school.get("district") or "")
+                hint = str(school.get("county_hint") or "")
+                if district:
+                    district_match = match_employer(district, hint, leas) if hint else None
+                    if district_match is None:
+                        expanded = expand_name(district)
+                        exact_leas = [
+                            lea
+                            for lea in leas
+                            if lea.get("expanded") == expanded and in_illinois(lea.get("lat"), lea.get("lng"))  # type: ignore[arg-type]
+                        ]
+                        if hint:
+                            exact_leas = [lea for lea in exact_leas if lea.get("county") == hint]
+                        if len(exact_leas) == 1:
+                            district_match = exact_leas[0]
+                    if district_match and district_match.get("leaid"):
+                        candidate_ids.append(str(district_match["leaid"]))
+                pool: list[dict[str, object]] = []
+                seen_pool: set[str] = set()
+                for leaid in candidate_ids:
+                    for building in schools.get(leaid, []):
+                        ncessch = str(building.get("ncessch") or "")
+                        if ncessch in seen_pool:
+                            continue
+                        seen_pool.add(ncessch)
+                        pool.append(building)
+                matched_school = match_school(str(school["site"]), pool) if pool else None
+                if matched_school is None:
+                    school_misses += 1
+                    print(
+                        f"  unmatched school: {school['site']} | {school.get('district') or school.get('label_employer')}"
+                    )
+                    continue
+                school_hits += 1
+                if expand_name(str(school["site"])) != matched_school.get("expanded"):
+                    print(f"  school: {school['site']} -> {matched_school['name']}")
+                cache[office_id] = _cache_record(
+                    "school",
+                    float(matched_school["lat"]),
+                    float(matched_school["lng"]),
+                    str(matched_school.get("address") or ""),
+                    NCES_SOURCE,
+                    str(matched_school["name"]),
+                    str(matched_school.get("county") or ""),
+                    str(matched_school.get("leaid") or ""),
+                )
 
     write_json(ROOT / "data" / "geocode_cache.json", {"offices": cache})
     print(f"exact employer matches: {exact}")

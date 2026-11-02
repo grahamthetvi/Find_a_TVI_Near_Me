@@ -151,17 +151,80 @@ export function fallbackInText(query, places) {
   };
 }
 
+export const DEFAULT_YEAR = "2024-2025";
+export const SCHOOL_YEARS = ["2023-2024", "2024-2025"];
+export const ROLE_ORDER = ["TVI", "COMS", "CATIS", "CLVT", "CVRT"];
+export const ROLE_LABELS = {
+  TVI: "Teacher of the Visually Impaired (TVI)",
+  COMS: "Orientation and mobility (COMS)",
+  CATIS: "Certified Assistive Technology Instructional Specialist (CATIS)",
+  CLVT: "Certified Low Vision Therapist (CLVT)",
+  CVRT: "Certified Vision Rehabilitation Therapist (CVRT)",
+};
+
 /**
- * @param {Array<{name: string, om: string, ei: string, locations: Array<{office_id: string, phone_office_id: string, label: string}>}>} people
+ * @param {string} value
+ * @returns {string}
+ */
+export function countyKey(value) {
+  return normalizePlace(String(value || "").replace(/\s+count(?:y|ies)$/i, ""));
+}
+
+/**
+ * @param {object} person
+ * @param {string} year
+ * @returns {Array<{office_id: string, phone_office_id: string, label: string, roe?: string}>}
+ */
+export function locationsForYear(person, year) {
+  if (person.years && Array.isArray(person.years[year])) {
+    return person.years[year];
+  }
+  if (year === DEFAULT_YEAR && Array.isArray(person.locations)) {
+    return person.locations;
+  }
+  return [];
+}
+
+/**
+ * @param {object} person
+ * @param {string[] | undefined} roles
+ * @returns {boolean}
+ */
+export function personMatchesRoles(person, roles) {
+  if (!roles) {
+    return true;
+  }
+  if (roles.length === 0) {
+    return false;
+  }
+  const have = Array.isArray(person.roles) ? person.roles : ["TVI"];
+  return roles.some((role) => have.includes(role));
+}
+
+/**
+ * @param {string[]} roles
+ * @returns {string}
+ */
+export function roleList(roles) {
+  const have = Array.isArray(roles) ? roles : [];
+  return have.join(", ") || "Not listed";
+}
+
+/**
+ * @param {Array<object>} people
  * @param {Map<string, {lat?: number, lng?: number, phone?: string}>} offices
  * @param {{lat: number, lng: number}} origin
- * @param {{om?: boolean, ei?: boolean, limit?: number}} options
+ * @param {{om?: boolean, ei?: boolean, limit?: number, year?: string, roles?: string[]}} options
  */
 export function nearestPeople(people, offices, origin, options) {
   const limit = options.limit ?? 10;
+  const year = options.year ?? DEFAULT_YEAR;
   /** @type {Array<{person: object, loc: object, miles: number, phone: string}>} */
   const ranked = [];
   for (const person of people) {
+    if (!personMatchesRoles(person, options.roles)) {
+      continue;
+    }
     if (options.om && person.om !== "Yes") {
       continue;
     }
@@ -170,7 +233,7 @@ export function nearestPeople(people, offices, origin, options) {
     }
     /** @type {{person: object, loc: object, miles: number, phone: string} | null} */
     let best = null;
-    for (const loc of person.locations) {
+    for (const loc of locationsForYear(person, year)) {
       const office = offices.get(loc.office_id);
       if (!office || typeof office.lat !== "number" || typeof office.lng !== "number") {
         continue;
@@ -191,4 +254,50 @@ export function nearestPeople(people, offices, origin, options) {
       left.miles - right.miles || left.person.name.localeCompare(right.person.name),
   );
   return ranked.slice(0, limit);
+}
+
+/**
+ * @param {string} query
+ * @param {{places: Array<{name: string, key: string, lat: number, lng: number}>, zips: Record<string, {lat: number, lng: number}>}} places
+ */
+export async function locateQuery(query, places) {
+  const local = resolveOffline(query, places);
+  if (local.status !== "street") {
+    return local;
+  }
+  try {
+    const url = new URL("https://geocoding.geo.census.gov/geocoder/locations/onelineaddress");
+    url.searchParams.set("address", query);
+    url.searchParams.set("benchmark", "Public_AR_Current");
+    url.searchParams.set("format", "json");
+    const response = await fetch(url);
+    if (response.ok) {
+      const body = await response.json();
+      const matches = body?.result?.addressMatches ?? [];
+      for (const match of matches) {
+        if (match?.addressComponents?.state !== "IL") {
+          continue;
+        }
+        const lat = match?.coordinates?.y;
+        const lng = match?.coordinates?.x;
+        if (typeof lat !== "number" || typeof lng !== "number") {
+          continue;
+        }
+        return {
+          status: "ok",
+          lat,
+          lng,
+          label: match.matchedAddress || query,
+          how: "street",
+        };
+      }
+    }
+  } catch {
+    /* Fall through to the city or ZIP written in the same address. */
+  }
+  const fallback = fallbackInText(query, places);
+  if (fallback.status === "ok") {
+    return { ...fallback, how: "fallback" };
+  }
+  return fallback;
 }

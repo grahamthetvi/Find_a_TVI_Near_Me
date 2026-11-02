@@ -2,26 +2,27 @@
 
 By Addison Graham. Credited to Lilly Graham.
 
-A static search for the ten Teachers of the Visually Impaired whose public Illinois offices are closest to a city, ZIP code, or street address. Open `index.html`. No account and no paid API.
+A static search for the ten public Illinois offices closest to a city, ZIP code, or street address, plus a coverage page for counties, credentials, and both school years. Open `index.html` or `analyze.html`. No account and no paid API.
 
 ## Website
 
-The visitor enters an Illinois city, ZIP code, or street address. A city or ZIP is resolved in the browser from `data/il_locations.json`, including a ZIP or city written inside a longer query. A street address is also sent to the Census geocoder. That service does not allow a web page to call it, so a failed street lookup uses the ZIP code or city in the same address. The page ranks offices with the haversine formula and shows ten rows.
+The visitor enters an Illinois city, ZIP code, or street address. A city or ZIP is resolved in the browser from `data/il_locations.json`, including a ZIP or city written inside a longer query. A street address is also sent to the Census geocoder. That service does not allow a web page to call it, so a failed street lookup uses the ZIP code or city in the same address. The page ranks offices with the haversine formula and shows ten rows. The default search is 2024–2025 Teachers of the Visually Impaired. 2023–2024 and the CATIS, CLVT, CVRT, and COMS lists are separate filters. `analyze.html` maps those same offices by county.
 
 Distance is to a public employer office, never to a home and never to the center of a county. The Regional Office of Education is a label on the row. Cook stays split: City of Chicago, North Cook, West Cook, and South Cook. Chicago Public Schools uses a 2023–2024 school building when that building matches, and otherwise says “district office.” A cooperative office may not be the town where an itinerant teacher sees students.
 
-The search is built from the `results` sheet of `Teacher_Logs_2024-2025.xlsx`. The 2023–2024 combined sheet adds a district, school, and region when the same first and last name is there. A name on the COMS lookup sheet sets O&M to Yes. Everyone else is “Not listed.” The reference workbook and every Hold or Removed sheet stay out.
+The 2024–2025 search is built from the `results` sheet of `Teacher_Logs_2024-2025.xlsx`. A matching 2023–2024 school building is kept on that year’s row. The 2023–2024 search uses the `Combined` sheet’s district and school. A later employer is not copied backward. A name on the COMS lookup sheet is Orientation and mobility. CATIS, CLVT, and CVRT names are included when those boxes are checked and a public office can be matched. Confirmed CLVT rows can be placed without a county when one Illinois office matches. Department of Human Services stays off the map. Hold, Removed, and the active-license workbook stay out.
 
-Of 379 people on the working log, 366 are in the search. Thirteen are left out: twelve Department of Human Services rows, which are not placed on a single office unless a school building is known, and one Echo Joint Agreement row, which did not match a public office. `data/unplaced_employers.json` lists those employers. `data/overrides.json` can add a checked front-office phone or a public profile. The build reads that file and does not rewrite it.
+Of 379 people on the 2024–2025 log, 366 are in that year’s TVI search. Thirteen are left out: twelve Department of Human Services rows, which are not placed on a single office unless a school building is known, and one Echo Joint Agreement row, which did not match a public office. `data/unplaced.json` lists people left off a year, including credential rows with no office. `data/overrides.json` can add a checked front-office phone or a public profile. The build reads that file and does not rewrite it.
 
 `robots.txt` asks crawlers to skip `data/`. The workbooks are already in this public repository, so that file does not hide them.
 
-`.github/workflows/pages.yml` publishes the search page when `main` changes. The published site is `index.html`, `style.css`, `app.js`, `search.js`, `robots.txt`, and the three JSON files the page loads. In the repository settings, set Pages to GitHub Actions.
+`.github/workflows/pages.yml` publishes the search and coverage pages when `main` changes. The published site is `index.html`, `analyze.html`, `style.css`, `app.js`, `search.js`, `analyze.js`, `map.js`, `robots.txt`, and the JSON files those pages load. In the repository settings, set Pages to GitHub Actions.
 
 Rebuild from the repository root after `pip install -r requirements.txt`:
 
 ```bash
 python3 scripts/build_locations.py
+python3 scripts/build_counties.py
 python3 scripts/geocode_entities.py
 python3 scripts/build_data.py
 python3 -m unittest scripts.test_tvi_data
@@ -30,20 +31,23 @@ node --test tests/search.test.mjs
 
 `.github/workflows/test.yml` runs those two commands on every push and pull request. The Pages workflow publishes the committed page and does not rerun the rebuild. The lookup scripts stay off both workflows because they write back into a workbook.
 
-`build_locations.py` reads the Census place and ZCTA gazetteers. `geocode_entities.py` reads the NCES EDGE 2023–24 district and school files, the IPEDS directory for three universities, and the Census geocoder for two state campuses. It writes `data/geocode_cache.json` and does not invent a coordinate. `build_data.py` writes `data/illinois_roes.json`, `data/entities.json`, and `data/tvis.json`.
+`build_locations.py` reads the Census place and ZCTA gazetteers. `build_counties.py` writes Illinois county shapes from the Census cartographic boundary file. `geocode_entities.py` reads the NCES EDGE 2023–24 district and school files, the IPEDS directory for three universities, and the Census geocoder for two state campuses. It writes `data/geocode_cache.json` and does not invent a coordinate. `build_data.py` writes `data/illinois_roes.json`, `data/entities.json`, `data/tvis.json`, and `data/unplaced.json`.
 
 ## What is in the repository
 
 | Path | Role |
 | --- | --- |
-| `index.html`, `style.css`, `app.js`, `search.js` | The search page. |
-| `data/tvis.json` | People in the search, with the office used for each row. |
+| `index.html`, `style.css`, `app.js`, `search.js` | The nearest-office search. |
+| `analyze.html`, `analyze.js`, `map.js` | County, credential, and year coverage. |
+| `data/tvis.json` | People in the search, with offices for 2023–2024 and 2024–2025. |
 | `data/entities.json` | Public offices and their coordinates. |
 | `data/il_locations.json` | Illinois cities and ZIP code points. |
+| `data/il_counties.json` | Illinois county shapes for the coverage map. |
 | `data/illinois_roes.json` | Region codes, labels, and counties. Codes 16, 17, and 45 are filled from their notes. |
 | `data/geocode_cache.json` | Cached public coordinates. |
 | `data/overrides.json` | Optional checked phone numbers and public profiles. |
-| `data/unplaced_employers.json` | Employers left out of the radius. |
+| `data/unplaced.json` | People left off a year, with the reason. |
+| `scripts/build_counties.py` | Builds the Illinois county file. |
 | `raw_foia/*.xlsx` | Source workbooks. Location lives in county, ROE/region, employer, district, and school-site columns. |
 | `raw_foia/illinois_roe_and_county_directory.md` | JSON crosswalk of 40 ISBE region codes to counties. The extension is `.md`; the body is a JSON array. |
 | `scripts/build_locations.py` | Builds the city and ZIP file. |
