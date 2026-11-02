@@ -1,6 +1,42 @@
 {
   "offices": [
     {
+      "id": "employer-adlai-e-stevenson-hsd-125-unknown",
+      "name": "Adlai E Stevenson HSD 125",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.199675,
+      "lng": -87.945054,
+      "address": "2 Stevenson Dr, Lincolnshire, IL 60069",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Adlai E Stevenson HSD 125",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-albers-school-district-63-unknown",
+      "name": "Albers School District 63",
+      "county": "",
+      "kind": "district_office",
+      "lat": 38.545097,
+      "lng": -89.614009,
+      "address": "206 N Broadway, Albers, IL 62215",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Albers SD 63",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-alton-cusd-11-madison",
+      "name": "Alton CUSD 11",
+      "county": "Madison",
+      "kind": "district_office",
+      "lat": 38.889382,
+      "lng": -90.177974,
+      "address": "550 Landmarks Blvd Ste A, Alton, IL 62002",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Alton CUSD 11",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-arthur-community-unit-school-district-305-douglas",
       "name": "Arthur Community Unit School District 305",
       "county": "Douglas",
@@ -13,6 +49,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-aurora-east-usd-131-dupage",
+      "name": "Aurora East USD 131",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.7461,
+      "lng": -88.318898,
+      "address": "310 Seminary Ave, Aurora, IL 60505",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Aurora East USD 131",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-aurora-east-usd-131-kane",
       "name": "Aurora East USD 131",
       "county": "Kane",
@@ -22,6 +70,18 @@
       "address": "310 Seminary Ave, Aurora, IL 60505",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Aurora East USD 131",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-aurora-west-usd-129-unknown",
+      "name": "Aurora West USD 129",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.762213,
+      "lng": -88.360065,
+      "address": "1877 W. Downer Pl, Aurora, IL 60506",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Aurora West USD 129",
       "phone": "Not listed"
     },
     {
@@ -49,6 +109,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-ball-chatham-cusd-5-unknown",
+      "name": "Ball Chatham CUSD 5",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.67557,
+      "lng": -89.706191,
+      "address": "201 W Mulberry St, Chatham, IL 62629",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Ball Chatham CUSD 5",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-barrington-cusd-220-lake",
       "name": "Barrington CUSD 220",
       "county": "Lake",
@@ -58,6 +130,42 @@
       "address": "515 W Main St, Barrington, IL 60010",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Barrington CUSD 220",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-barrington-cusd-220-unknown",
+      "name": "Barrington CUSD 220",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.153558,
+      "lng": -88.146107,
+      "address": "515 W Main St, Barrington, IL 60010",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Barrington CUSD 220",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-batavia-usd-101-dupage",
+      "name": "Batavia USD 101",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.850236,
+      "lng": -88.313839,
+      "address": "335 W Wilson St, Batavia, IL 60510",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Batavia USD 101",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-batavia-usd-101-kane",
+      "name": "Batavia USD 101",
+      "county": "Kane",
+      "kind": "district_office",
+      "lat": 41.850236,
+      "lng": -88.313839,
+      "address": "335 W Wilson St, Batavia, IL 60510",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Batavia USD 101",
       "phone": "Not listed"
     },
     {
@@ -97,6 +205,42 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-belvidere-cusd-100-dekalb",
+      "name": "Belvidere CUSD 100",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 42.248026,
+      "lng": -88.846922,
+      "address": "1201 5th Ave, Belvidere, IL 61008",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Belvidere CUSD 100",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-belvidere-cusd-100-unknown",
+      "name": "Belvidere CUSD 100",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.248026,
+      "lng": -88.846922,
+      "address": "1201 5th Ave, Belvidere, IL 61008",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Belvidere CUSD 100",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-berwyn-south-sd-100-dekalb",
+      "name": "Berwyn South SD 100",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 41.83038,
+      "lng": -87.784987,
+      "address": "3401 Gunderson Ave, Berwyn, IL 60402",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Berwyn South SD 100",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-black-hawk-area-sp-ed-district-rock-island",
       "name": "Black Hawk Area Sp Ed District",
       "county": "Rock Island",
@@ -121,6 +265,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-bloomington-school-district-87-unknown",
+      "name": "Bloomington School District 87",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.481594,
+      "lng": -88.990493,
+      "address": "300 E Monroe St, Bloomington, IL 61701",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Bloomington SD 87",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-bloomington-sd-87-mclean",
       "name": "Bloomington SD 87",
       "county": "McLean",
@@ -130,6 +286,30 @@
       "address": "300 E Monroe St, Bloomington, IL 61701",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Bloomington SD 87",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-bloomington-sd-87-unknown",
+      "name": "Bloomington SD 87",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.481594,
+      "lng": -88.990493,
+      "address": "300 E Monroe St, Bloomington, IL 61701",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Bloomington SD 87",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-byron-cusd-226-unknown",
+      "name": "Byron CUSD 226",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.130922,
+      "lng": -89.265675,
+      "address": "696 N Colfax St, Byron, IL 61010",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Byron CUSD 226",
       "phone": "Not listed"
     },
     {
@@ -145,6 +325,30 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-carmi-white-county-cusd-5-unknown",
+      "name": "Carmi-White County CUSD 5",
+      "county": "",
+      "kind": "district_office",
+      "lat": 38.087249,
+      "lng": -88.162645,
+      "address": "211 W Robinson St, Carmi, IL 62821",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Carmi-White County CUSD 5",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-ccsd-146-cook",
+      "name": "CCSD 146",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.580179,
+      "lng": -87.780512,
+      "address": "6611 171st St, Tinley Park, IL 60477",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "CCSD 146",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-ccsd-62-cook",
       "name": "CCSD 62",
       "county": "Cook",
@@ -154,6 +358,30 @@
       "address": "777 E Algonquin Rd, Des Plaines, IL 60016",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "CCSD 62",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-ccsd-89-unknown",
+      "name": "CCSD 89",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.830644,
+      "lng": -88.067668,
+      "address": "22W600 Butterfield Rd, Glen Ellyn, IL 60137",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "CCSD 89",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-ccsd-93-dupage",
+      "name": "CCSD 93",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.943812,
+      "lng": -88.125853,
+      "address": "230 Covington Dr, Bloomingdale, IL 60108",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "CCSD 93",
       "phone": "Not listed"
     },
     {
@@ -172,6 +400,18 @@
       "id": "employer-champaign-cusd-4-champaign",
       "name": "Champaign CUSD 4",
       "county": "Champaign",
+      "kind": "district_office",
+      "lat": 40.084147,
+      "lng": -88.250549,
+      "address": "502 W Windsor Rd, Champaign, IL 61820",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Champaign CUSD 4",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-champaign-cusd-4-unknown",
+      "name": "Champaign CUSD 4",
+      "county": "",
       "kind": "district_office",
       "lat": 40.084147,
       "lng": -88.250549,
@@ -217,6 +457,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-chsd-155-cook",
+      "name": "CHSD 155",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 42.21976,
+      "lng": -88.320691,
+      "address": "1 Virginia Rd, Crystal Lake, IL 60014",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "CHSD 155",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-chsd-155-mchenry",
       "name": "CHSD 155",
       "county": "McHenry",
@@ -238,6 +490,30 @@
       "address": "5110 W 24th St, Cicero, IL 60804",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Cicero SD 99",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-cicero-sd-99-dupage",
+      "name": "Cicero SD 99",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.847872,
+      "lng": -87.752169,
+      "address": "5110 W 24th St, Cicero, IL 60804",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Cicero SD 99",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-city-of-chicago-sd-299-cook",
+      "name": "City of Chicago SD 299",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.882233,
+      "lng": -87.628809,
+      "address": "42 W Madison St 2nd Flr, Chicago, IL 60602",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Chicago Public Schools Dist 299",
       "phone": "Not listed"
     },
     {
@@ -289,6 +565,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-cons-hsd-230-cook",
+      "name": "Cons HSD 230",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.615515,
+      "lng": -87.849289,
+      "address": "15100 S 94th Ave, Orland Park, IL 60462",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Cons HSD 230",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-coop-assoc-for-spec-educ-dupage",
       "name": "Coop Assoc for Spec Educ",
       "county": "DuPage",
@@ -313,6 +601,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-cooperative-association-for-special-education-kane",
+      "name": "Cooperative Association For Special Education",
+      "county": "Kane",
+      "kind": "cooperative_office",
+      "lat": 41.830644,
+      "lng": -88.067668,
+      "address": "22W600 Butterfield Rd, Glen Ellyn, IL 60137",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Coop Assoc for Spec Educ",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-crystal-lake-ccsd-47-mchenry",
       "name": "Crystal Lake CCSD 47",
       "county": "McHenry",
@@ -325,9 +625,45 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-cusd-200-dupage",
+      "name": "CUSD 200",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.857389,
+      "lng": -88.107449,
+      "address": "130 W Park Ave, Wheaton, IL 60189",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "CUSD 200",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-cusd-300-kane",
       "name": "CUSD 300",
       "county": "Kane",
+      "kind": "district_office",
+      "lat": 42.161829,
+      "lng": -88.341203,
+      "address": "2550 Harnish Dr, Algonquin, IL 60102",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "CUSD 300",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-cusd-300-mchenry",
+      "name": "CUSD 300",
+      "county": "McHenry",
+      "kind": "district_office",
+      "lat": 42.161829,
+      "lng": -88.341203,
+      "address": "2550 Harnish Dr, Algonquin, IL 60102",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "CUSD 300",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-cusd-300-unknown",
+      "name": "CUSD 300",
+      "county": "",
       "kind": "district_office",
       "lat": 42.161829,
       "lng": -88.341203,
@@ -373,6 +709,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-decatur-sd-61-unknown",
+      "name": "Decatur SD 61",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.846702,
+      "lng": -88.956459,
+      "address": "101 W Cerro Gordo St, Decatur, IL 62523",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Decatur SD 61",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-deer-park-ccsd-82-lasalle",
       "name": "Deer Park CCSD 82",
       "county": "LaSalle",
@@ -385,6 +733,30 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-deer-park-ccsd-82-unknown",
+      "name": "Deer Park CCSD 82",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.273099,
+      "lng": -88.966054,
+      "address": "2350 E 1025th Rd, Ottawa, IL 61350",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Deer Park CCSD 82",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-deerfield-sd-109-unknown",
+      "name": "Deerfield SD 109",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.166924,
+      "lng": -87.840329,
+      "address": "517 Deerfield Rd, Deerfield, IL 60015",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Deerfield SD 109",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-dekalb-cusd-428-dekalb",
       "name": "DeKalb CUSD 428",
       "county": "DeKalb",
@@ -394,6 +766,30 @@
       "address": "501 W Dresser Rd, Dekalb, IL 60115",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "DeKalb CUSD 428",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-dekalb-cusd-428-kane",
+      "name": "DeKalb CUSD 428",
+      "county": "Kane",
+      "kind": "district_office",
+      "lat": 41.919911,
+      "lng": -88.754567,
+      "address": "501 W Dresser Rd, Dekalb, IL 60115",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "DeKalb CUSD 428",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-dixon-usd-170-dekalb",
+      "name": "Dixon USD 170",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 41.838899,
+      "lng": -89.459084,
+      "address": "1335 Franklin Grove Rd, Dixon, IL 61021",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Dixon USD 170",
       "phone": "Not listed"
     },
     {
@@ -469,9 +865,33 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-eastern-il-area-of-spec-educ-unknown",
+      "name": "Eastern IL Area of Spec Educ",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 39.485526,
+      "lng": -88.261112,
+      "address": "5837 Park Dr Ste 1, Charleston, IL 61920",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Eastern IL Area of Spec Educ",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-eastern-illinois-area-special-education-coles",
       "name": "Eastern Illinois Area Special Education",
       "county": "Coles",
+      "kind": "cooperative_office",
+      "lat": 39.485526,
+      "lng": -88.261112,
+      "address": "5837 Park Dr Ste 1, Charleston, IL 61920",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Eastern IL Area of Spec Educ",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-eastern-illinois-area-special-education-unknown",
+      "name": "Eastern Illinois Area Special Education",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 39.485526,
       "lng": -88.261112,
@@ -496,6 +916,18 @@
       "id": "employer-eisenhower-cooperative-cook",
       "name": "Eisenhower Cooperative",
       "county": "Cook",
+      "kind": "cooperative_office",
+      "lat": 41.64873,
+      "lng": -87.751428,
+      "address": "5318 135Th St, Crestwood, IL 60418",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Eisenhower Cooperative",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-eisenhower-cooperative-unknown",
+      "name": "Eisenhower Cooperative",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 41.64873,
       "lng": -87.751428,
@@ -553,6 +985,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-exceptional-learners-collaborative-unknown",
+      "name": "Exceptional Learners Collaborative",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.216759,
+      "lng": -87.939182,
+      "address": "990 Corporate Woods Pkwy, Vernon Hills, IL 60061",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Exceptional Learners",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-exceptional-learners-lake",
       "name": "Exceptional Learners",
       "county": "Lake",
@@ -562,6 +1006,30 @@
       "address": "990 Corporate Woods Pkwy, Vernon Hills, IL 60061",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Exceptional Learners",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-fisher-cusd-1-unknown",
+      "name": "Fisher CUSD 1",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.309127,
+      "lng": -88.354341,
+      "address": "801 S 5th St, Fisher, IL 61843",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Fisher CUSD 1",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-flossmoor-sd-161-cook",
+      "name": "Flossmoor SD 161",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.532185,
+      "lng": -87.644806,
+      "address": "41 E Elmwood Dr, Chicago Heights, IL 60411",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Flossmoor SD 161",
       "phone": "Not listed"
     },
     {
@@ -577,6 +1045,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-frankfort-cusd-168-unknown",
+      "name": "Frankfort CUSD 168",
+      "county": "",
+      "kind": "district_office",
+      "lat": 37.905723,
+      "lng": -88.908543,
+      "address": "900 N Cherry St, West Frankfort, IL 62896",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Frankfort CUSD 168",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-franklin-jefferson-co-sp-ed-dist-jefferson",
       "name": "Franklin-Jefferson Co Sp Ed Dist",
       "county": "Jefferson",
@@ -586,6 +1066,18 @@
       "address": "409 E Park St, Benton, IL 62812",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Franklin-Jefferson Co Sp Ed Dist",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-franklin-park-sd-84-unknown",
+      "name": "Franklin Park SD 84",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.932204,
+      "lng": -87.852747,
+      "address": "2915 Maple St, Franklin Park, IL 60131",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Franklin Park SD 84",
       "phone": "Not listed"
     },
     {
@@ -601,9 +1093,57 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-freeport-sd-145-unknown",
+      "name": "Freeport SD 145",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.27992,
+      "lng": -89.609951,
+      "address": "501 E South St, Freeport, IL 61032",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Freeport SD 145",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-geneseo-cusd-228-dekalb",
+      "name": "Geneseo CUSD 228",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 41.461686,
+      "lng": -90.143243,
+      "address": "648 N Chicago St, Geneseo, IL 61254",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Geneseo CUSD 228",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-geneva-cusd-304-kane",
+      "name": "Geneva CUSD 304",
+      "county": "Kane",
+      "kind": "district_office",
+      "lat": 41.890841,
+      "lng": -88.308248,
+      "address": "227 N 4th St, Geneva, IL 60134",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Geneva CUSD 304",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-gibson-city-melvin-sibley-community-unit-school-district-5-ford",
       "name": "Gibson City-Melvin-Sibley Community Unit School District 5",
       "county": "Ford",
+      "kind": "district_office",
+      "lat": 40.467781,
+      "lng": -88.375712,
+      "address": "307 N Sangamon Ave, Gibson City, IL 60936",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Gibson City-Melvin-Sibley CUSD 5",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-gibson-city-melvin-sibley-community-unit-school-district-5-unknown",
+      "name": "Gibson City-Melvin-Sibley Community Unit School District 5",
+      "county": "",
       "kind": "district_office",
       "lat": 40.467781,
       "lng": -88.375712,
@@ -622,6 +1162,18 @@
       "address": "1401 Greenwood Rd, Glenview, IL 60026",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Glenview CCSD 34",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-grayslake-ccsd-46-lake",
+      "name": "Grayslake CCSD 46",
+      "county": "Lake",
+      "kind": "district_office",
+      "lat": 42.353272,
+      "lng": -88.031738,
+      "address": "565 Frederick Rd, Grayslake, IL 60030",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Grayslake CCSD 46",
       "phone": "Not listed"
     },
     {
@@ -652,6 +1204,18 @@
       "id": "employer-grundy-county-spec-educ-coop-grundy",
       "name": "Grundy County Spec Educ Coop",
       "county": "Grundy",
+      "kind": "cooperative_office",
+      "lat": 41.369536,
+      "lng": -88.434109,
+      "address": "725 School St, Morris, IL 60450",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Grundy County Spec Educ Coop",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-grundy-county-spec-educ-coop-unknown",
+      "name": "Grundy County Spec Educ Coop",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 41.369536,
       "lng": -88.434109,
@@ -697,6 +1261,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-harlem-ud-122-unknown",
+      "name": "Harlem UD 122",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.347392,
+      "lng": -89.048816,
+      "address": "8605 N 2nd St, Machesney Park, IL 61115",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Harlem UD 122",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-harlem-ud-122-winnebago",
       "name": "Harlem UD 122",
       "county": "Winnebago",
@@ -733,6 +1309,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-heritage-cusd-8-unknown",
+      "name": "Heritage CUSD 8",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.036672,
+      "lng": -87.965547,
+      "address": "512 W 1st St, Homer, IL 61849",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Heritage CUSD 8",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-herscher-community-unit-school-district-2-kankakee",
       "name": "Herscher Community Unit School District 2",
       "county": "Kankakee",
@@ -742,6 +1330,30 @@
       "address": "501 N Main St, Herscher, IL 60941",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Herscher CUSD 2",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-herscher-cusd-2-unknown",
+      "name": "Herscher CUSD 2",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.055664,
+      "lng": -88.099422,
+      "address": "501 N Main St, Herscher, IL 60941",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Herscher CUSD 2",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-hinckley-big-rock-cusd-429-kane",
+      "name": "Hinckley Big Rock CUSD 429",
+      "county": "Kane",
+      "kind": "district_office",
+      "lat": 41.7706,
+      "lng": -88.6305,
+      "address": "700 E Lincoln Ave, Hinckley, IL 60520",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Hinckley Big Rock CUSD 429",
       "phone": "Not listed"
     },
     {
@@ -805,9 +1417,45 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-illinois-school-for-the-visually-impaired-unknown",
+      "name": "Illinois School for the Visually Impaired",
+      "county": "",
+      "kind": "campus",
+      "lat": 39.73425348617,
+      "lng": -90.217293519031,
+      "address": "658 E STATE ST, JACKSONVILLE, IL, 62650",
+      "source_url": "https://www.dhs.state.il.us/page.aspx?item=87427",
+      "matched_name": "Illinois School for the Visually Impaired",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-illinois-state-university-dupage",
+      "name": "Illinois State University",
+      "county": "DuPage",
+      "kind": "campus",
+      "lat": 40.509403,
+      "lng": -88.990058,
+      "address": "North and School Streets, Normal, IL 61790-1000",
+      "source_url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "matched_name": "Illinois State University",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-illinois-state-university-mclean",
       "name": "Illinois State University",
       "county": "McLean",
+      "kind": "campus",
+      "lat": 40.509403,
+      "lng": -88.990058,
+      "address": "North and School Streets, Normal, IL 61790-1000",
+      "source_url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "matched_name": "Illinois State University",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-illinois-state-university-unknown",
+      "name": "Illinois State University",
+      "county": "",
       "kind": "campus",
       "lat": 40.509403,
       "lng": -88.990058,
@@ -841,6 +1489,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-indian-springs-sd-109-dupage",
+      "name": "Indian Springs SD 109",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.754275,
+      "lng": -87.834397,
+      "address": "7540 S 86th Ave, Justice, IL 60458",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Indian Springs SD 109",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-isu-laboratory-schools-mclean",
       "name": "ISU Laboratory Schools",
       "county": "McLean",
@@ -850,6 +1510,18 @@
       "address": "ISU Campus Box 5300, Normal, IL 61790",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "ISU  Laboratory Schools",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-j-s-morton-hsd-201-dupage",
+      "name": "J S Morton HSD 201",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.8506,
+      "lng": -87.769107,
+      "address": "5801 W Cermak Rd, Cicero, IL 60804",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "J S Morton HSD 201",
       "phone": "Not listed"
     },
     {
@@ -877,9 +1549,33 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-jacksonville-sd-117-unknown",
+      "name": "Jacksonville SD 117",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.734143,
+      "lng": -90.230538,
+      "address": "211 W State St, Jacksonville, IL 62650",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Jacksonville SD 117",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-jamp-spec-educ-services-pulaski",
       "name": "Jamp Spec Educ Services",
       "county": "Pulaski",
+      "kind": "cooperative_office",
+      "lat": 37.249434,
+      "lng": -89.021349,
+      "address": "251 W 2nd St, Ullin, IL 62992",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Jamp Spec Educ Services",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-jamp-spec-educ-services-unknown",
+      "name": "Jamp Spec Educ Services",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 37.249434,
       "lng": -89.021349,
@@ -901,6 +1597,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-joliet-psd-86-will",
+      "name": "Joliet PSD 86",
+      "county": "Will",
+      "kind": "district_office",
+      "lat": 41.532014,
+      "lng": -88.100522,
+      "address": "420 N Raynor Ave, Joliet, IL 60435",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Joliet PSD 86",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-joliet-public-school-district-86-will",
       "name": "Joliet Public School District 86",
       "county": "Will",
@@ -913,9 +1621,33 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-joliet-twp-hsd-204-will",
+      "name": "Joliet Twp HSD 204",
+      "county": "Will",
+      "kind": "district_office",
+      "lat": 41.51585,
+      "lng": -88.145021,
+      "address": "300 Caterpillar Dr, Joliet, IL 60436",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Joliet Twp HSD 204",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-kaneland-cusd-302-kane",
       "name": "Kaneland CUSD 302",
       "county": "Kane",
+      "kind": "district_office",
+      "lat": 41.881686,
+      "lng": -88.533425,
+      "address": "47W326 Keslinger Rd, Maple Park, IL 60151",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Kaneland CUSD 302",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-kaneland-cusd-302-lake",
+      "name": "Kaneland CUSD 302",
+      "county": "Lake",
       "kind": "district_office",
       "lat": 41.881686,
       "lng": -88.533425,
@@ -949,6 +1681,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-kankakee-sd-111-unknown",
+      "name": "Kankakee SD 111",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.117199,
+      "lng": -87.847236,
+      "address": "240 Warren Ave, Kankakee, IL 60901",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Kankakee SD 111",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-kaskaskia-spec-educ-district-marion",
       "name": "Kaskaskia Spec Educ District",
       "county": "Marion",
@@ -961,9 +1705,45 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-kaskaskia-spec-educ-district-unknown",
+      "name": "Kaskaskia Spec Educ District",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 38.52571,
+      "lng": -89.135224,
+      "address": "224 S Locust St, Centralia, IL 62801",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Kaskaskia Spec Educ District",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-kewanee-community-unit-school-district-229-unknown",
+      "name": "Kewanee Community Unit School District 229",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.254131,
+      "lng": -89.925189,
+      "address": "1001 N Main St, Kewanee, IL 61443",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Kewanee CUSD 229",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-kirby-school-district-140-cook",
       "name": "Kirby School District 140",
       "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.582486,
+      "lng": -87.815571,
+      "address": "16931 Grissom Dr, Tinley Park, IL 60477",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Kirby SD 140",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-kirby-school-district-140-dupage",
+      "name": "Kirby School District 140",
+      "county": "DuPage",
       "kind": "district_office",
       "lat": 41.582486,
       "lng": -87.815571,
@@ -1009,8 +1789,32 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-lagrange-area-dept-spec-ed-ladse-dupage",
+      "name": "Lagrange Area Dept Spec Ed-Ladse",
+      "county": "DuPage",
+      "kind": "cooperative_office",
+      "lat": 41.811991,
+      "lng": -87.886736,
+      "address": "1301 W Cossitt Ave, La Grange, IL 60525",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lagrange Area Dept Spec Ed-Ladse",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-lagrange-highlands-school-district-106-cook",
       "name": "Lagrange Highlands School District 106",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.782152,
+      "lng": -87.892044,
+      "address": "1750 W Plainfield Rd, La Grange Highlands, IL 60525",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "LaGrange Highlands SD 106",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lagrange-highlands-sd-106-cook",
+      "name": "LaGrange Highlands SD 106",
       "county": "Cook",
       "kind": "district_office",
       "lat": 41.782152,
@@ -1024,6 +1828,30 @@
       "id": "employer-lagrange-school-district-102-cook",
       "name": "La Grange School District 102",
       "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.820369,
+      "lng": -87.880749,
+      "address": "333 N Park Rd, La Grange Park, IL 60526",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "La Grange SD 102",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lagrange-school-district-102-unknown",
+      "name": "La Grange School District 102",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.820369,
+      "lng": -87.880749,
+      "address": "333 N Park Rd, La Grange Park, IL 60526",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "La Grange SD 102",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lagrange-sd-102-dupage",
+      "name": "La Grange SD 102",
+      "county": "DuPage",
       "kind": "district_office",
       "lat": 41.820369,
       "lng": -87.880749,
@@ -1057,6 +1885,42 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-lasalle-putnam-alliance-unknown",
+      "name": "LaSalle Putnam Alliance",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.34983,
+      "lng": -88.86563,
+      "address": "1009 Boyce Memorial Dr, Ottawa, IL 61350",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "LaSalle Putnam Alliance",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lebanon-cusd-9-st-clair",
+      "name": "Lebanon CUSD 9",
+      "county": "St. Clair",
+      "kind": "district_office",
+      "lat": 38.600705,
+      "lng": -89.810375,
+      "address": "200 W Schuetz St, Lebanon, IL 62254",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lebanon CUSD 9",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lemont-twp-hsd-210-cook",
+      "name": "Lemont Twp HSD 210",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.6749,
+      "lng": -87.9922,
+      "address": "800 Porter St, Lemont, IL 60439",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lemont Twp HSD 210",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-lincoln-way-area-spec-ed-ja-dist-will",
       "name": "Lincoln-Way Area Spec Ed JA Dist",
       "county": "Will",
@@ -1069,8 +1933,44 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-lincoln-way-chsd-210-will",
+      "name": "Lincoln Way CHSD 210",
+      "county": "Will",
+      "kind": "district_office",
+      "lat": 41.5131,
+      "lng": -87.9297,
+      "address": "1801 E Lincoln Hwy, New Lenox, IL 60451",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lincoln Way CHSD 210",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lincoln-way-community-high-school-district-210-cook",
+      "name": "Lincoln-Way Community High School District 210",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.5131,
+      "lng": -87.9297,
+      "address": "1801 E Lincoln Hwy, New Lenox, IL 60451",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lincoln Way CHSD 210",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-lockport-area-spec-educ-coop-will",
       "name": "Lockport Area Spec Educ Coop",
+      "county": "Will",
+      "kind": "cooperative_office",
+      "lat": 41.589661,
+      "lng": -88.028536,
+      "address": "1343 E 7th St, Lockport, IL 60441",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lockport Area Spec Educ Coop",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lockport-area-special-ed-cooperative-will",
+      "name": "Lockport Area Special Ed Cooperative (LASEC)",
       "county": "Will",
       "kind": "cooperative_office",
       "lat": 41.589661,
@@ -1093,6 +1993,54 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-lombard-sd-44-unknown",
+      "name": "Lombard SD 44",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.875455,
+      "lng": -88.021709,
+      "address": "150 W Madison St, Lombard, IL 60148",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lombard SD 44",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-lyons-twp-hsd-204-dupage",
+      "name": "Lyons Twp HSD 204",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.8113,
+      "lng": -87.8802,
+      "address": "100 S Brainard Ave, La Grange, IL 60525",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Lyons Twp HSD 204",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-marion-community-unit-school-district-2-dupage",
+      "name": "Marion Community Unit School District 2",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 37.72936,
+      "lng": -88.945211,
+      "address": "1700 W Cherry St, Marion, IL 62959",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Marion CUSD 2",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-marion-cusd-2-unknown",
+      "name": "Marion CUSD 2",
+      "county": "",
+      "kind": "district_office",
+      "lat": 37.72936,
+      "lng": -88.945211,
+      "address": "1700 W Cherry St, Marion, IL 62959",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Marion CUSD 2",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-martinsville-cusd-3c-clark",
       "name": "Martinsville CUSD 3C",
       "county": "Clark",
@@ -1102,6 +2050,30 @@
       "address": "255 W Cumberland St, Martinsville, IL 62442",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Martinsville CUSD 3C",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-martinsville-cusd-3c-unknown",
+      "name": "Martinsville CUSD 3C",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.331551,
+      "lng": -87.886885,
+      "address": "255 W Cumberland St, Martinsville, IL 62442",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Martinsville CUSD 3C",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-mascoutah-cud-19-st-clair",
+      "name": "Mascoutah CUD 19",
+      "county": "St. Clair",
+      "kind": "district_office",
+      "lat": 38.496992,
+      "lng": -89.804823,
+      "address": "421 W Harnett St, Mascoutah, IL 62258",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Mascoutah CUD 19",
       "phone": "Not listed"
     },
     {
@@ -1117,6 +2089,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-mattoon-cusd-2-unknown",
+      "name": "Mattoon CUSD 2",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.481275,
+      "lng": -88.375508,
+      "address": "1701 Charleston Ave, Mattoon, IL 61938",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Mattoon CUSD 2",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-mchenry-ccsd-15-mchenry",
       "name": "McHenry CCSD 15",
       "county": "McHenry",
@@ -1126,6 +2110,18 @@
       "address": "1011 N Green St, Mchenry, IL 60050",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "McHenry CCSD 15",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-mchenry-chsd-156-mchenry",
+      "name": "McHenry CHSD 156",
+      "county": "McHenry",
+      "kind": "district_office",
+      "lat": 42.337638,
+      "lng": -88.289088,
+      "address": "4716 W Crystal Lake Rd, McHenry, IL 60050",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "McHenry CHSD 156",
       "phone": "Not listed"
     },
     {
@@ -1165,6 +2161,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-mokena-sd-159-will",
+      "name": "Mokena SD 159",
+      "county": "Will",
+      "kind": "district_office",
+      "lat": 41.53287,
+      "lng": -87.891838,
+      "address": "11244 Willow Crest Ln, Mokena, IL 60448",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Mokena SD 159",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-moline-coal-valley-school-district-40-rock-island",
       "name": "Moline-Coal Valley School District 40",
       "county": "Rock Island",
@@ -1174,6 +2182,30 @@
       "address": "1619 11th Ave, Moline, IL 61265",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Moline-Coal Valley CUSD 40",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-morton-community-unit-school-district-709-unknown",
+      "name": "Morton Community Unit School District 709",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.599985,
+      "lng": -89.458938,
+      "address": "1050 S 4th Ave Ste 200, Morton, IL 61550",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Morton CUSD 709",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-mount-olive-cusd-5-unknown",
+      "name": "Mount Olive CUSD 5",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.071717,
+      "lng": -89.737698,
+      "address": "804 W Main St, Mount Olive, IL 62069",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Mount Olive CUSD 5",
       "phone": "Not listed"
     },
     {
@@ -1192,6 +2224,18 @@
       "id": "employer-naperville-cusd-203-dupage",
       "name": "Naperville CUSD 203",
       "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.766575,
+      "lng": -88.152045,
+      "address": "203 W Hillside Rd, Naperville, IL 60540",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Naperville CUSD 203",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-naperville-cusd-203-unknown",
+      "name": "Naperville CUSD 203",
+      "county": "",
       "kind": "district_office",
       "lat": 41.766575,
       "lng": -88.152045,
@@ -1237,6 +2281,54 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-niles-twp-district-for-spec-educ-unknown",
+      "name": "Niles Twp District for Spec Educ",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 42.039327,
+      "lng": -87.770862,
+      "address": "8701 Menard Ave, Morton Grove, IL 60053",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Niles Twp District for Spec Educ",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-north-boone-cusd-200-unknown",
+      "name": "North Boone CUSD 200",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.408331,
+      "lng": -88.817028,
+      "address": "6248 N Boone School Rd, Poplar Grove, IL 61065",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "North Boone CUSD 200",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-north-palos-sd-117-cook",
+      "name": "North Palos SD 117",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.703521,
+      "lng": -87.813104,
+      "address": "7825 W 103rd St, Palos Hills, IL 60465",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "North Palos SD 117",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-north-suburban-special-education-organization-cook",
+      "name": "North Suburban Special Education Organization",
+      "county": "Cook",
+      "kind": "cooperative_office",
+      "lat": 42.080526,
+      "lng": -87.947269,
+      "address": "799 W Kensington Rd, Mt Prospect, IL 60056",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "NW Suburban Spec Educ Org",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-north-wamac-school-district-186-clinton",
       "name": "North Wamac School District 186",
       "county": "Clinton",
@@ -1261,9 +2353,57 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-northern-illinois-university-peoria",
+      "name": "Northern Illinois University",
+      "county": "Peoria",
+      "kind": "campus",
+      "lat": 41.933869,
+      "lng": -88.766428,
+      "address": "1425 W. Lincoln Hwy., Dekalb, IL 60115-2828",
+      "source_url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "matched_name": "Northern Illinois University",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-northern-illinois-university-unknown",
+      "name": "Northern Illinois University",
+      "county": "",
+      "kind": "campus",
+      "lat": 41.933869,
+      "lng": -88.766428,
+      "address": "1425 W. Lincoln Hwy., Dekalb, IL 60115-2828",
+      "source_url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "matched_name": "Northern Illinois University",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-northwest-suburban-special-educational-organization-unknown",
+      "name": "Northwest Suburban Special Educational Organization (NSSEO)",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 42.080526,
+      "lng": -87.947269,
+      "address": "799 W Kensington Rd, Mt Prospect, IL 60056",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "NW Suburban Spec Educ Org",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-northwestern-illinois-assn-dekalb",
       "name": "Northwestern Illinois Assn",
       "county": "DeKalb",
+      "kind": "cooperative_office",
+      "lat": 41.990329,
+      "lng": -88.687542,
+      "address": "245 W Exchange St Ste 4, Sycamore, IL 60178",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Northwestern Illinois Assn",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-northwestern-illinois-assn-unknown",
+      "name": "Northwestern Illinois Assn",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 41.990329,
       "lng": -88.687542,
@@ -1285,9 +2425,57 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-nw-suburban-spec-educ-org-unknown",
+      "name": "NW Suburban Spec Educ Org",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 42.080526,
+      "lng": -87.947269,
+      "address": "799 W Kensington Rd, Mt Prospect, IL 60056",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "NW Suburban Spec Educ Org",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-oak-lawn-hometown-sd-123-dupage",
+      "name": "Oak Lawn-Hometown SD 123",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.723563,
+      "lng": -87.727024,
+      "address": "4201 W 93rd St, Oak Lawn, IL 60453",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Oak Lawn-Hometown SD 123",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-oak-park-elementary-school-district-97-cook",
       "name": "Oak Park Elementary School District 97",
       "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.880222,
+      "lng": -87.782193,
+      "address": "260 Madison St, Oak Park, IL 60302",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Oak Park ESD 97",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-oak-park-esd-97-cook",
+      "name": "Oak Park ESD 97",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 41.880222,
+      "lng": -87.782193,
+      "address": "260 Madison St, Oak Park, IL 60302",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Oak Park ESD 97",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-oak-park-esd-97-dupage",
+      "name": "Oak Park ESD 97",
+      "county": "DuPage",
       "kind": "district_office",
       "lat": 41.880222,
       "lng": -87.782193,
@@ -1381,9 +2569,33 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-pekin-community-school-district-303-unknown",
+      "name": "Pekin Community School District 303",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.562775,
+      "lng": -89.619893,
+      "address": "320 Stadium Dr, Pekin, IL 61554",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Pekin CSD 303",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-pekin-psd-108-tazewell",
       "name": "Pekin PSD 108",
       "county": "Tazewell",
+      "kind": "district_office",
+      "lat": 40.565577,
+      "lng": -89.645709,
+      "address": "501 Washington St, Pekin, IL 61554",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Pekin PSD 108",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-pekin-psd-108-unknown",
+      "name": "Pekin PSD 108",
+      "county": "",
       "kind": "district_office",
       "lat": 40.565577,
       "lng": -89.645709,
@@ -1429,6 +2641,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-plainfield-sd-202-unknown",
+      "name": "Plainfield SD 202",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.596977,
+      "lng": -88.193188,
+      "address": "15732 S Howard St, Plainfield, IL 60544",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Plainfield SD 202",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-plainfield-sd-202-will",
       "name": "Plainfield SD 202",
       "county": "Will",
@@ -1453,6 +2677,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-plano-cusd-88-unknown",
+      "name": "Plano CUSD 88",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.656507,
+      "lng": -88.532907,
+      "address": "800 S Hale St, Plano, IL 60545",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Plano CUSD 88",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-prairie-central-community-unit-school-district-8-livingston",
       "name": "Prairie Central Community Unit School District 8",
       "county": "Livingston",
@@ -1462,6 +2698,30 @@
       "address": "605 N 7th St, Fairbury, IL 61739",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Prairie Central CUSD 8",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-prairie-central-community-unit-school-district-8-unknown",
+      "name": "Prairie Central Community Unit School District 8",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.752633,
+      "lng": -88.506568,
+      "address": "605 N 7th St, Fairbury, IL 61739",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Prairie Central CUSD 8",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-quincy-school-district-172-unknown",
+      "name": "Quincy School District 172",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.931404,
+      "lng": -91.393125,
+      "address": "1416 Maine St, Quincy, IL 62301",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Quincy SD 172",
       "phone": "Not listed"
     },
     {
@@ -1489,6 +2749,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-river-bend-cusd-2-unknown",
+      "name": "River Bend CUSD 2",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.86592,
+      "lng": -90.166804,
+      "address": "1110 3rd St, Fulton, IL 61252",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "River Bend CUSD 2",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-river-bend-cusd-2-whiteside",
       "name": "River Bend CUSD 2",
       "county": "Whiteside",
@@ -1513,6 +2785,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-river-trails-school-district-26-unknown",
+      "name": "River Trails School District 26",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.081126,
+      "lng": -87.897382,
+      "address": "1900 E Kensington Rd, Mt Prospect, IL 60056",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "River Trails SD 26",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-rock-island-sd-41-rock-island",
       "name": "Rock Island SD 41",
       "county": "Rock Island",
@@ -1528,6 +2812,30 @@
       "id": "employer-rockford-school-district-205-winnebago",
       "name": "Rockford School District 205",
       "county": "Winnebago",
+      "kind": "district_office",
+      "lat": 42.262298,
+      "lng": -89.081738,
+      "address": "501 7th St, Rockford, IL 61104",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Rockford SD 205",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-rockford-sd-205-dekalb",
+      "name": "Rockford SD 205",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 42.262298,
+      "lng": -89.081738,
+      "address": "501 7th St, Rockford, IL 61104",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Rockford SD 205",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-rockford-sd-205-unknown",
+      "name": "Rockford SD 205",
+      "county": "",
       "kind": "district_office",
       "lat": 42.262298,
       "lng": -89.081738,
@@ -1609,9 +2917,45 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-sangamon-area-spec-ed-dist-unknown",
+      "name": "Sangamon Area Spec Ed Dist",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 39.770397,
+      "lng": -89.617273,
+      "address": "2500 Taylor Ave, Springfield, IL 62703",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Sangamon Area Spec Ed Dist",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-sangamon-area-special-education-district-dupage",
+      "name": "Sangamon Area Special Education District",
+      "county": "DuPage",
+      "kind": "cooperative_office",
+      "lat": 39.770397,
+      "lng": -89.617273,
+      "address": "2500 Taylor Ave, Springfield, IL 62703",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Sangamon Area Spec Ed Dist",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-sangamon-area-special-education-district-sangamon",
       "name": "Sangamon Area Special Education District",
       "county": "Sangamon",
+      "kind": "cooperative_office",
+      "lat": 39.770397,
+      "lng": -89.617273,
+      "address": "2500 Taylor Ave, Springfield, IL 62703",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Sangamon Area Spec Ed Dist",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-sangamon-area-special-education-district-unknown",
+      "name": "Sangamon Area Special Education District",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 39.770397,
       "lng": -89.617273,
@@ -1681,6 +3025,30 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-sd-u-46-unknown",
+      "name": "SD U-46",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.036631,
+      "lng": -88.2774,
+      "address": "355 E Chicago St, Elgin, IL 60120",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "SD U-46",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-shelbyville-community-unit-school-district-4-dupage",
+      "name": "Shelbyville Community Unit School District 4",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 39.406362,
+      "lng": -88.801755,
+      "address": "720 W Main St, Shelbyville, IL 62565",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Shelbyville CUSD 4",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-shelbyville-community-unit-school-district-4-shelby",
       "name": "Shelbyville Community Unit School District 4",
       "county": "Shelby",
@@ -1690,6 +3058,18 @@
       "address": "720 W Main St, Shelbyville, IL 62565",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Shelbyville CUSD 4",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-skokie-sd-69-cook",
+      "name": "Skokie SD 69",
+      "county": "Cook",
+      "kind": "district_office",
+      "lat": 42.032292,
+      "lng": -87.754491,
+      "address": "5050 Madison St, Skokie, IL 60077",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Skokie SD 69",
       "phone": "Not listed"
     },
     {
@@ -1714,6 +3094,18 @@
       "address": "701 N Deneen St, Staunton, IL 62088",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "South Macoupin Association",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-southern-will-county-cooperative-for-special-education-will",
+      "name": "Southern Will County Cooperative for Special Education",
+      "county": "Will",
+      "kind": "cooperative_office",
+      "lat": 41.545867,
+      "lng": -88.126532,
+      "address": "1207 N Larkin Ave, Joliet, IL 60435",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "S Will Co Coop for Spec Ed",
       "phone": "Not listed"
     },
     {
@@ -1743,6 +3135,18 @@
     {
       "id": "employer-spec-educ-dist-lake-county-sedol-lake",
       "name": "Spec Educ Dist Lake County/Sedol",
+      "county": "Lake",
+      "kind": "cooperative_office",
+      "lat": 42.353967,
+      "lng": -87.986188,
+      "address": "18160 W Gages Lake Rd, Grayslake, IL 60030",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Spec Educ Dist Lake County/Sedol",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-special-education-district-lake-county-sedol-lake",
+      "name": "Special Education District Lake County/SEDOL",
       "county": "Lake",
       "kind": "cooperative_office",
       "lat": 42.353967,
@@ -1789,9 +3193,105 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-springfield-sd-186-unknown",
+      "name": "Springfield SD 186",
+      "county": "",
+      "kind": "district_office",
+      "lat": 39.799338,
+      "lng": -89.684242,
+      "address": "1900 W Monroe St, Springfield, IL 62703",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Springfield SD 186",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-st-charles-cusd-303-dekalb",
+      "name": "St Charles CUSD 303",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 41.910586,
+      "lng": -88.321244,
+      "address": "201 S 7Th St, Saint Charles, IL 60174",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "St Charles CUSD 303",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-st-charles-cusd-303-dupage",
+      "name": "St Charles CUSD 303",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.910586,
+      "lng": -88.321244,
+      "address": "201 S 7Th St, Saint Charles, IL 60174",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "St Charles CUSD 303",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-steward-esd-220-unknown",
+      "name": "Steward ESD 220",
+      "county": "",
+      "kind": "district_office",
+      "lat": 41.846982,
+      "lng": -89.023261,
+      "address": "602 Main St, Steward, IL 60553",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Steward ESD 220",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-sycamore-community-unit-school-district-427-dekalb",
+      "name": "Sycamore Community Unit School District 427",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 41.990329,
+      "lng": -88.687542,
+      "address": "245 W Exchange St, Sycamore, IL 60178",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Sycamore CUSD 427",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-sycamore-cusd-427-dekalb",
+      "name": "Sycamore CUSD 427",
+      "county": "DeKalb",
+      "kind": "district_office",
+      "lat": 41.990329,
+      "lng": -88.687542,
+      "address": "245 W Exchange St, Sycamore, IL 60178",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Sycamore CUSD 427",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-tazewell-mason-cntys-sp-ed-assoc-tazewell",
       "name": "Tazewell-Mason Cntys Sp Ed Assoc",
       "county": "Tazewell",
+      "kind": "cooperative_office",
+      "lat": 40.573611,
+      "lng": -89.608155,
+      "address": "300 Cedar St, Pekin, IL 61554",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Tazewell-Mason Cntys Sp Ed Assoc",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-tazewell-mason-cntys-sp-ed-assoc-unknown",
+      "name": "Tazewell-Mason Cntys Sp Ed Assoc",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 40.573611,
+      "lng": -89.608155,
+      "address": "300 Cedar St, Pekin, IL 61554",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Tazewell-Mason Cntys Sp Ed Assoc",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-tazewell-mason-counties-special-education-association-unknown",
+      "name": "Tazewell-Mason Counties Special Education Association",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 40.573611,
       "lng": -89.608155,
@@ -1816,6 +3316,18 @@
       "id": "employer-tri-county-sp-ed-jnt-agreement-jackson",
       "name": "Tri-County Sp Ed Jnt Agreement",
       "county": "Jackson",
+      "kind": "cooperative_office",
+      "lat": 37.74116,
+      "lng": -89.253612,
+      "address": "1335 Cedar Ct, Carbondale, IL 62901",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Tri-County Sp Ed Jnt Agreement",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-tri-county-sp-ed-jnt-agreement-unknown",
+      "name": "Tri-County Sp Ed Jnt Agreement",
+      "county": "",
       "kind": "cooperative_office",
       "lat": 37.74116,
       "lng": -89.253612,
@@ -1885,6 +3397,30 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-university-of-illinois-at-urbana-champaign-dupage",
+      "name": "University of Illinois at Urbana-Champaign",
+      "county": "DuPage",
+      "kind": "campus",
+      "lat": 40.104718,
+      "lng": -88.229114,
+      "address": "601 E John Street, Champaign, IL 61820-5711",
+      "source_url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "matched_name": "University of Illinois Urbana-Champaign",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-university-of-illinois-at-urbana-champaign-unknown",
+      "name": "University of Illinois at Urbana-Champaign",
+      "county": "",
+      "kind": "campus",
+      "lat": 40.104718,
+      "lng": -88.229114,
+      "address": "601 E John Street, Champaign, IL 61820-5711",
+      "source_url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "matched_name": "University of Illinois Urbana-Champaign",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-urbana-sd-116-champaign",
       "name": "Urbana SD 116",
       "county": "Champaign",
@@ -1894,6 +3430,30 @@
       "address": "1101 E University, Urbana, IL 61802",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Urbana SD 116",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-urbana-sd-116-unknown",
+      "name": "Urbana SD 116",
+      "county": "",
+      "kind": "district_office",
+      "lat": 40.115236,
+      "lng": -88.195669,
+      "address": "1101 E University, Urbana, IL 61802",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Urbana SD 116",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-valley-view-community-unit-school-district-365u-dupage",
+      "name": "Valley View Community Unit School District 365U",
+      "county": "DuPage",
+      "kind": "district_office",
+      "lat": 41.65356,
+      "lng": -88.10358,
+      "address": "801 W Normantown Rd, Romeoville, IL 60446",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Valley View CUSD 365U",
       "phone": "Not listed"
     },
     {
@@ -1918,6 +3478,18 @@
       "address": "801 W Normantown Rd, Romeoville, IL 60446",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Valley View CUSD 365U",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-vermilion-assoc-for-spec-educ-vermilion",
+      "name": "Vermilion Assoc for Spec Educ",
+      "county": "Vermilion",
+      "kind": "cooperative_office",
+      "lat": 40.101565,
+      "lng": -87.661336,
+      "address": "15009 Catlin Tilton Rd, Danville, IL 61834",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Vermilion Assoc for Spec Educ",
       "phone": "Not listed"
     },
     {
@@ -1957,6 +3529,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-warren-cusd-205-unknown",
+      "name": "Warren CUSD 205",
+      "county": "",
+      "kind": "district_office",
+      "lat": 42.494045,
+      "lng": -89.990605,
+      "address": "311 S Water St, Warren, IL 61087",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Warren CUSD 205",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-waukegan-cusd-60-lake",
       "name": "Waukegan CUSD 60",
       "county": "Lake",
@@ -1969,6 +3553,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-wesclin-cusd-3-st-clair",
+      "name": "Wesclin CUSD 3",
+      "county": "St. Clair",
+      "kind": "district_office",
+      "lat": 38.569249,
+      "lng": -89.692985,
+      "address": "699 Wesclin Rd, Trenton, IL 62293",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Wesclin CUSD 3",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-will-county-school-district-92-will",
       "name": "Will County School District 92",
       "county": "Will",
@@ -1978,6 +3574,18 @@
       "address": "708 N State St, Lockport, IL 60441",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Will County SD 92",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-williamson-co-spec-educ-district-unknown",
+      "name": "Williamson Co Spec Educ District",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 37.726963,
+      "lng": -88.932041,
+      "address": "411 S Court St, Marion, IL 62959",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Williamson Co Spec Educ District",
       "phone": "Not listed"
     },
     {
@@ -2005,6 +3613,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "employer-winnebago-county-special-education-cooperative-unknown",
+      "name": "Winnebago County Special Education Cooperative",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 42.433333,
+      "lng": -89.078563,
+      "address": "11971 Wagon Wheel Rd, Rockton, IL 61072",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Winnebago County Spec Educ Coop",
+      "phone": "Not listed"
+    },
+    {
       "id": "employer-winnebago-county-special-education-cooperative-winnebago",
       "name": "Winnebago County Special Education Cooperative",
       "county": "Winnebago",
@@ -2014,6 +3634,18 @@
       "address": "11971 Wagon Wheel Rd, Rockton, IL 61072",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Winnebago County Spec Educ Coop",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-woodford-county-spec-educ-assn-unknown",
+      "name": "Woodford County Spec Educ Assn",
+      "county": "",
+      "kind": "cooperative_office",
+      "lat": 40.78919,
+      "lng": -89.372138,
+      "address": "205 S Engelwood Dr, Metamora, IL 61548",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Woodford Cty Special Ed Assoc",
       "phone": "Not listed"
     },
     {
@@ -2056,6 +3688,18 @@
       "id": "employer-yorkville-cusd-115-kendall",
       "name": "Yorkville CUSD 115",
       "county": "Kendall",
+      "kind": "district_office",
+      "lat": 41.659381,
+      "lng": -88.445926,
+      "address": "602 Center Pkwy Ste A, Yorkville, IL 60560",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Yorkville CUSD 115",
+      "phone": "Not listed"
+    },
+    {
+      "id": "employer-yorkville-cusd-115-unknown",
+      "name": "Yorkville CUSD 115",
+      "county": "",
       "kind": "district_office",
       "lat": 41.659381,
       "lng": -88.445926,
@@ -2197,6 +3841,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "school-batavia-usd-101-j-b-nelson-elem-school",
+      "name": "J B Nelson Elem School",
+      "county": "kane",
+      "kind": "school",
+      "lat": 41.84642,
+      "lng": -88.29793,
+      "address": "334 William Wood Ln, Batavia, IL 60510",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "J B Nelson Elem School",
+      "phone": "Not listed"
+    },
+    {
       "id": "school-belvidere-cusd-100-belvidere-central-middle-school",
       "name": "Belvidere Central Middle School",
       "county": "boone",
@@ -2269,6 +3925,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "school-byron-cusd-226-byron-high-school-9-12",
+      "name": "Byron High School 9-12",
+      "county": "ogle",
+      "kind": "school",
+      "lat": 42.130922,
+      "lng": -89.265675,
+      "address": "696 N Colfax St, Byron, IL 61010",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Byron High School 9-12",
+      "phone": "Not listed"
+    },
+    {
       "id": "school-carmi-white-county-cusd-5-brownsville-attendance-center",
       "name": "Brownsville Attendance Center",
       "county": "white",
@@ -2326,6 +3994,18 @@
       "address": "283 El Paso Ln, Carol Stream, IL 60188",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Jay Stream Middle School",
+      "phone": "Not listed"
+    },
+    {
+      "id": "school-ccsd-93-western-trails-elem-school",
+      "name": "Western Trails Elem School",
+      "county": "dupage",
+      "kind": "school",
+      "lat": 41.9258,
+      "lng": -88.1286,
+      "address": "860 Idaho St, Carol Stream, IL 60188",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Western Trails Elem School",
       "phone": "Not listed"
     },
     {
@@ -2473,18 +4153,6 @@
       "phone": "Not listed"
     },
     {
-      "id": "school-city-of-chicago-sd-299-saucedo-elem-scholastic-academy",
-      "name": "Saucedo Elem Scholastic Academy",
-      "county": "cook",
-      "kind": "school",
-      "lat": 41.8486,
-      "lng": -87.6983,
-      "address": "2850 W 24th Blvd, Chicago, IL 60623",
-      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
-      "matched_name": "Saucedo Elem Scholastic Academy",
-      "phone": "Not listed"
-    },
-    {
       "id": "school-cons-hsd-230-victor-j-andrew-high-school",
       "name": "Victor J Andrew High School",
       "county": "cook",
@@ -2494,42 +4162,6 @@
       "address": "9001 171st St, Orland Hills, IL 60487",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Victor J Andrew High School",
-      "phone": "Not listed"
-    },
-    {
-      "id": "school-cons-sd-158-chesak-elementary-school",
-      "name": "Chesak Elementary School",
-      "county": "mchenry",
-      "kind": "school",
-      "lat": 42.18407,
-      "lng": -88.410591,
-      "address": "10910 Reed Rd, Lake in the Hills, IL 60156",
-      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
-      "matched_name": "Chesak Elementary School",
-      "phone": "Not listed"
-    },
-    {
-      "id": "school-cons-sd-158-huntley-high-school",
-      "name": "Huntley High School",
-      "county": "mchenry",
-      "kind": "school",
-      "lat": 42.162119,
-      "lng": -88.464547,
-      "address": "13719 Harmony Rd, Huntley, IL 60142",
-      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
-      "matched_name": "Huntley High School",
-      "phone": "Not listed"
-    },
-    {
-      "id": "school-cons-sd-158-mackeben-elementary-school",
-      "name": "Mackeben Elementary School",
-      "county": "mchenry",
-      "kind": "school",
-      "lat": 42.158633,
-      "lng": -88.375518,
-      "address": "800 Dr John Burkey Dr, Algonquin, IL 60102",
-      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
-      "matched_name": "Mackeben Elementary School",
       "phone": "Not listed"
     },
     {
@@ -3337,6 +4969,18 @@
       "phone": "Not listed"
     },
     {
+      "id": "school-north-boone-cusd-200-north-boone-upper-elem-sch",
+      "name": "North Boone Upper Elem Sch",
+      "county": "boone",
+      "kind": "school",
+      "lat": 42.409989,
+      "lng": -88.818807,
+      "address": "6200 N Boone School Rd, Poplar Grove, IL 61065",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "North Boone Upper Elem Sch",
+      "phone": "Not listed"
+    },
+    {
       "id": "school-north-boone-cusd-200-poplar-grove-elem-school",
       "name": "Poplar Grove Elem School",
       "county": "boone",
@@ -3406,18 +5050,6 @@
       "address": "10801 W 159th St, Orland Park, IL 60467",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Century Junior High School",
-      "phone": "Not listed"
-    },
-    {
-      "id": "school-oswego-cusd-308-traughber-jr-high-school",
-      "name": "Traughber Jr High School",
-      "county": "kendall",
-      "kind": "school",
-      "lat": 41.67071,
-      "lng": -88.331342,
-      "address": "570 Colchester Dr, Oswego, IL 60543",
-      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
-      "matched_name": "Traughber Jr High School",
       "phone": "Not listed"
     },
     {
@@ -3598,6 +5230,18 @@
       "address": "320 W Wise Rd, Schaumburg, IL 60193",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Robert Frost JHS",
+      "phone": "Not listed"
+    },
+    {
+      "id": "school-sd-u-46-bartlett-high-school",
+      "name": "Bartlett High School",
+      "county": "dupage",
+      "kind": "school",
+      "lat": 41.950491,
+      "lng": -88.192267,
+      "address": "701 W Schick Rd, Bartlett, IL 60103",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Bartlett High School",
       "phone": "Not listed"
     },
     {
@@ -3898,6 +5542,18 @@
       "address": "209 N Dewey St, Troy, IL 62294",
       "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
       "matched_name": "Silver Creek Elementary",
+      "phone": "Not listed"
+    },
+    {
+      "id": "school-urbana-sd-116-thomas-paine-elem-school",
+      "name": "Thomas Paine Elem School",
+      "county": "champaign",
+      "kind": "school",
+      "lat": 40.096993,
+      "lng": -88.184593,
+      "address": "1801 James Cherry Dr, Urbana, IL 61802",
+      "source_url": "https://nces.ed.gov/programs/edge/geographic/schoollocations",
+      "matched_name": "Thomas Paine Elem School",
       "phone": "Not listed"
     },
     {

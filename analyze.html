@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Illinois TVI coverage</title>
+    <meta
+      name="description"
+      content="County and credential coverage for Teachers of the Visually Impaired and related Illinois offices."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#counts">Skip to coverage counts</a>
+    <header>
+      <p class="edition">Illinois Edition</p>
+      <h1>Coverage by county and credential</h1>
+      <p>By Addison Graham. Credited to Lilly Graham.</p>
+      <p class="nav"><a href="index.html">Back to the nearest-office search</a></p>
+    </header>
+    <main>
+      <p>
+        Offices are public employer or school points. People without a
+        confident office stay in the counts below the map and are not drawn on
+        a county. Distance is never measured to a home or to the center of a
+        county.
+      </p>
+      <form id="filters">
+        <fieldset>
+          <legend>School year</legend>
+          <label class="check" for="year-2024">
+            <input id="year-2024" name="year" type="radio" value="2024-2025" checked />
+            2024–2025
+          </label>
+          <label class="check" for="year-2023">
+            <input id="year-2023" name="year" type="radio" value="2023-2024" />
+            2023–2024
+          </label>
+          <label class="check" for="year-both">
+            <input id="year-both" name="year" type="radio" value="both" />
+            Both years
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Credentials</legend>
+          <label class="check" for="role-tvi">
+            <input id="role-tvi" name="roles" type="checkbox" value="TVI" checked />
+            Teacher of the Visually Impaired (TVI)
+          </label>
+          <label class="check" for="role-coms">
+            <input id="role-coms" name="roles" type="checkbox" value="COMS" />
+            Orientation and mobility (COMS)
+          </label>
+          <label class="check" for="role-catis">
+            <input id="role-catis" name="roles" type="checkbox" value="CATIS" />
+            Certified Assistive Technology Instructional Specialist (CATIS)
+          </label>
+          <label class="check" for="role-clvt">
+            <input id="role-clvt" name="roles" type="checkbox" value="CLVT" />
+            Certified Low Vision Therapist (CLVT)
+          </label>
+          <label class="check" for="role-cvrt">
+            <input id="role-cvrt" name="roles" type="checkbox" value="CVRT" />
+            Certified Vision Rehabilitation Therapist (CVRT)
+          </label>
+        </fieldset>
+        <div class="actions">
+          <button id="apply" type="submit">Update coverage</button>
+          <button id="theme" type="button" aria-pressed="false">Black and yellow theme</button>
+        </div>
+      </form>
+      <p id="status" tabindex="-1" role="status" aria-live="polite">Loading coverage files.</p>
+      <section id="counts" aria-labelledby="counts-heading">
+        <h2 id="counts-heading">Counts</h2>
+        <div class="stats" id="stats"></div>
+      </section>
+      <section aria-labelledby="map-heading">
+        <h2 id="map-heading">People by county</h2>
+        <p class="legend" id="map-legend">Darker counties have more people with a public office in that county.</p>
+        <div class="map-wrap" id="map"></div>
+        <div id="county-detail">
+          <p>Select a county on the map to list its offices and people.</p>
+        </div>
+      </section>
+      <section aria-labelledby="county-heading">
+        <h2 id="county-heading">Counties</h2>
+        <div class="table-wrap" tabindex="0" aria-label="People and offices by county">
+          <table>
+            <caption>Every Illinois county, including counties with no placed office.</caption>
+            <thead>
+              <tr>
+                <th scope="col">County</th>
+                <th scope="col">People</th>
+                <th scope="col">Offices</th>
+              </tr>
+            </thead>
+            <tbody id="county-rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section aria-labelledby="roe-heading">
+        <h2 id="roe-heading">Regional Offices of Education</h2>
+        <div class="table-wrap" tabindex="0" aria-label="People and offices by ROE">
+          <table>
+            <caption>People grouped by the ROE on the office used in the directory.</caption>
+            <thead>
+              <tr>
+                <th scope="col">ROE</th>
+                <th scope="col">People</th>
+                <th scope="col">Offices</th>
+              </tr>
+            </thead>
+            <tbody id="roe-rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section aria-labelledby="compare-heading">
+        <h2 id="compare-heading">Year comparison</h2>
+        <div class="stats" id="compare-stats"></div>
+        <div class="table-wrap" tabindex="0" aria-label="People who changed offices between years">
+          <table>
+            <caption>People on both years at a different office.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">2023–2024</th>
+                <th scope="col">2024–2025</th>
+              </tr>
+            </thead>
+            <tbody id="compare-rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section aria-labelledby="place-heading">
+        <h2 id="place-heading">Distance from a place</h2>
+        <form id="place-form">
+          <div class="field">
+            <label for="place-q">Illinois ZIP code, city, or street address</label>
+            <input id="place-q" name="place-q" type="search" autocomplete="off" />
+          </div>
+          <div class="actions">
+            <button type="submit">Measure coverage</button>
+          </div>
+        </form>
+        <div id="place-summary"></div>
+      </section>
+      <section aria-labelledby="unplaced-heading">
+        <h2 id="unplaced-heading">People left off the map</h2>
+        <div id="unplaced-groups"></div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        County shapes are Census cartographic boundaries. Office coordinates
+        come from NCES, IPEDS, or the Census geocoder.
+      </p>
+    </footer>
+    <noscript>
+      <p>This page needs JavaScript. The directory files are in the data folder.</p>
+    </noscript>
+    <script type="module" src="analyze.js"></script>
+  </body>
+</html>

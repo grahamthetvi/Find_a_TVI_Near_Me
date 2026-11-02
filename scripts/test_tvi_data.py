@@ -8,6 +8,8 @@ from pathlib import Path
 
 from scripts.geocode_entities import address_agrees
 from scripts.tvi_data import (
+    YEAR_CURRENT,
+    YEAR_PRIOR,
     compile_directory,
     counties_from_note,
     display_name,
@@ -243,12 +245,14 @@ class CompileTests(unittest.TestCase):
         people = plan_people(current, prior, [], roes, {"phones": {}, "linkedin": {}, "om": {}, "ei": {}})
         by_name = {person["name"]: person for person in people}
         self.assertEqual(by_name["Gina Carr"]["ei"], "Yes")
-        self.assertEqual(by_name["Ada Lovelace"]["employers"][0]["roe"], "City of Chicago")
+        ada_current = by_name["Ada Lovelace"]["years"][YEAR_CURRENT]
+        self.assertEqual(ada_current["employers"][0]["roe"], "City of Chicago")
         dhs_id = employer_office_id("Dept of Human Services", "Morgan")
-        cps_id = by_name["Ada Lovelace"]["employers"][0]["office_id"]
-        school_id = by_name["Ada Lovelace"]["schools"][0]["office_id"]
-        grace_office = by_name["Grace Hopper"]["employers"][0]["office_id"]
-        grace_school = by_name["Grace Hopper"]["schools"][0]["office_id"]
+        cps_id = ada_current["employers"][0]["office_id"]
+        school_id = ada_current["schools"][0]["office_id"]
+        grace_current = by_name["Grace Hopper"]["years"][YEAR_CURRENT]
+        grace_office = grace_current["employers"][0]["office_id"]
+        grace_school = grace_current["schools"][0]["office_id"]
         cache = {
             dhs_id: {"lat": 39.73, "lng": -90.24, "kind": "district_office", "matched_name": "Dept of Human Services"},
             cps_id: {"lat": 41.88, "lng": -87.63, "kind": "district_office", "matched_name": "Chicago Public Schools Dist 299"},
@@ -256,19 +260,19 @@ class CompileTests(unittest.TestCase):
             grace_office: {"lat": 39.78, "lng": -89.65, "kind": "district_office", "matched_name": "Springfield SD 186"},
             grace_school: {"lat": 40.10, "lng": -89.00, "kind": "school", "matched_name": "Lincoln Elementary School"},
         }
-        placed, offices, unplaced, omitted = compile_directory(
+        placed, offices, unplaced, stats = compile_directory(
             people, cache, {"phones": {}, "linkedin": {}, "om": {}, "ei": {}}
         )
         names = {person["name"] for person in placed}
         self.assertNotIn("Gina Carr", names)
         self.assertIn("Ada Lovelace", names)
         ada = next(person for person in placed if person["name"] == "Ada Lovelace")
-        self.assertEqual(len(ada["locations"]), 1)
-        self.assertIn("Curie Metropolitan High School", ada["locations"][0]["label"])
-        self.assertNotIn("district office", ada["locations"][0]["label"])
+        self.assertEqual(len(ada["years"][YEAR_CURRENT]), 1)
+        self.assertIn("Curie Metropolitan High School", ada["years"][YEAR_CURRENT][0]["label"])
+        self.assertNotIn("district office", ada["years"][YEAR_CURRENT][0]["label"])
         grace = next(person for person in placed if person["name"] == "Grace Hopper")
-        self.assertEqual(len(grace["locations"]), 2)
-        self.assertEqual(omitted, 1)
+        self.assertEqual(len(grace["years"][YEAR_CURRENT]), 2)
+        self.assertEqual(stats[YEAR_CURRENT]["omitted_people"], 1)
         self.assertTrue(any(item["reason"].startswith("Department of Human Services") for item in unplaced))
         self.assertEqual(len(offices), 4)
         self.assertEqual(
@@ -309,12 +313,12 @@ class CompileTests(unittest.TestCase):
             "employer-springfield": {"lat": 39.781, "lng": -89.650, "kind": "district_office"},
             "school-lincoln": {"lat": 39.781, "lng": -89.650, "kind": "school", "matched_name": "Lincoln Elementary School"},
         }
-        placed, _offices, _unplaced, omitted = compile_directory(
+        placed, _offices, _unplaced, stats = compile_directory(
             people, cache, {"phones": {}, "linkedin": {}, "om": {}, "ei": {}}
         )
-        self.assertEqual(omitted, 0)
-        self.assertEqual(len(placed[0]["locations"]), 1)
-        self.assertIn("Lincoln", placed[0]["locations"][0]["label"])
+        self.assertEqual(stats[YEAR_CURRENT]["omitted_people"], 0)
+        self.assertEqual(len(placed[0]["years"][YEAR_CURRENT]), 1)
+        self.assertIn("Lincoln", placed[0]["years"][YEAR_CURRENT][0]["label"])
 
 
 class GeocoderGuardTests(unittest.TestCase):
@@ -363,11 +367,106 @@ class OfficeCountyLabelTests(unittest.TestCase):
                 "county": "henry",
             }
         }
-        placed, _offices, _unplaced, _omitted = compile_directory(
+        placed, _offices, _unplaced, _stats = compile_directory(
             people, cache, {"phones": {}, "linkedin": {}, "om": {}, "ei": {}}, ROES
         )
-        self.assertIn("Bureau, Henry, and Stark ROE", placed[0]["locations"][0]["label"])
-        self.assertNotIn("DeKalb", placed[0]["locations"][0]["label"])
+        self.assertIn("Bureau, Henry, and Stark ROE", placed[0]["years"][YEAR_CURRENT][0]["label"])
+        self.assertNotIn("DeKalb", placed[0]["years"][YEAR_CURRENT][0]["label"])
+
+
+class RoleAndYearTests(unittest.TestCase):
+    def test_prior_only_district_and_credential_rules(self) -> None:
+        current = [
+            {
+                "first": "Ada",
+                "last": "Lovelace",
+                "employer": "Springfield SD 186",
+                "county": "Sangamon",
+            }
+        ]
+        prior = [
+            {
+                "first": "Grace",
+                "last": "Hopper",
+                "region": "Menard/Sangamon",
+                "district": "Springfield SD 186",
+                "site": "",
+            }
+        ]
+        coms = [{"first": "Ada", "last": "Lovelace"}]
+        clvt = [
+            {
+                "first": "Ana",
+                "last": "Leffel",
+                "employer": "Northwest Suburban Special Educational Organization",
+                "county": "",
+                "confirmed": True,
+            },
+            {
+                "first": "Caitlyn",
+                "last": "Engel",
+                "employer": "Minooka Community High School District 111",
+                "county": "",
+                "confirmed": False,
+            },
+        ]
+        cvrt = [
+            {
+                "first": "Alex",
+                "last": "Gillaspie",
+                "employer": "Illinois Department of Human Services",
+                "county": "",
+            }
+        ]
+        people = plan_people(
+            current,
+            prior,
+            coms,
+            ROES,
+            {"phones": {}, "linkedin": {}, "om": {}, "ei": {}},
+            [],
+            clvt,
+            cvrt,
+        )
+        by_name = {person["name"]: person for person in people}
+        self.assertEqual(by_name["Ada Lovelace"]["roles"], ["TVI", "COMS"])
+        self.assertEqual(by_name["Ada Lovelace"]["om"], "Yes")
+        self.assertTrue(by_name["Grace Hopper"]["years"][YEAR_PRIOR]["belongs"])
+        self.assertFalse(by_name["Grace Hopper"]["years"][YEAR_CURRENT]["belongs"])
+        self.assertEqual(
+            by_name["Grace Hopper"]["years"][YEAR_PRIOR]["employers"][0]["name"],
+            "Springfield SD 186",
+        )
+        self.assertTrue(by_name["Ana Leffel"]["years"][YEAR_CURRENT]["employers"])
+        self.assertEqual(by_name["Caitlyn Engel"]["years"][YEAR_CURRENT]["unplaced_reason"], "Employer needs a hand check")
+        self.assertEqual(
+            by_name["Alex Gillaspie"]["years"][YEAR_CURRENT]["unplaced_reason"],
+            "Department of Human Services is not used as a map point",
+        )
+        self.assertTrue(is_dhs("Illinois Department of Human Services"))
+
+        grace_id = by_name["Grace Hopper"]["years"][YEAR_PRIOR]["employers"][0]["office_id"]
+        ana_id = by_name["Ana Leffel"]["years"][YEAR_CURRENT]["employers"][0]["office_id"]
+        ada_id = by_name["Ada Lovelace"]["years"][YEAR_CURRENT]["employers"][0]["office_id"]
+        cache = {
+            grace_id: {"lat": 39.78, "lng": -89.65, "kind": "district_office", "county": "sangamon"},
+            ana_id: {"lat": 42.05, "lng": -88.05, "kind": "cooperative_office", "county": "cook"},
+            ada_id: {"lat": 39.78, "lng": -89.65, "kind": "district_office", "county": "sangamon"},
+        }
+        placed, _offices, unplaced, stats = compile_directory(
+            people, cache, {"phones": {}, "linkedin": {}, "om": {}, "ei": {}}, ROES
+        )
+        placed_names = {person["name"] for person in placed}
+        self.assertIn("Grace Hopper", placed_names)
+        self.assertIn("Ana Leffel", placed_names)
+        self.assertNotIn("Caitlyn Engel", placed_names)
+        self.assertNotIn("Alex Gillaspie", placed_names)
+        grace = next(person for person in placed if person["name"] == "Grace Hopper")
+        self.assertEqual(grace["years"][YEAR_CURRENT], [])
+        self.assertEqual(len(grace["years"][YEAR_PRIOR]), 1)
+        self.assertEqual(stats[YEAR_CURRENT]["omitted_people"], 0)
+        self.assertTrue(any(item["name"] == "Caitlyn Engel" for item in unplaced))
+        self.assertTrue(any(item["name"] == "Alex Gillaspie" for item in unplaced))
 
 
 class PublishedDirectoryTests(unittest.TestCase):
@@ -383,9 +482,30 @@ class PublishedDirectoryTests(unittest.TestCase):
         person_ids = [person["id"] for person in tvis["people"]]
         self.assertEqual(len(person_ids), len(set(person_ids)))
         self.assertIn(str(tvis["omitted_people"]), tvis["omitted_note"])
+        self.assertEqual(tvis["years"][YEAR_CURRENT]["omitted_people"], tvis["omitted_people"])
+        self.assertEqual(tvis["omitted_people"], 13)
+        tvi_current = [
+            person
+            for person in tvis["people"]
+            if "TVI" in person["roles"] and person["years"][YEAR_CURRENT]
+        ]
+        self.assertEqual(len(tvi_current), 366)
+        self.assertTrue(any(person["name"] == "Ana Leffel" and "CLVT" in person["roles"] for person in tvis["people"]))
+        counties = json.loads((ROOT / "data" / "il_counties.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(counties["features"]), 102)
+        names = {feature["properties"]["name"] for feature in counties["features"]}
+        self.assertIn("Cook", names)
+        self.assertIn("DuPage", names)
+        self.assertIn("St. Clair", names)
         for person in tvis["people"]:
-            self.assertTrue(person["locations"], person["name"])
-            for loc in person["locations"]:
+            self.assertTrue(person["roles"], person["name"])
+            locations = [
+                loc
+                for year_locations in person["years"].values()
+                for loc in year_locations
+            ]
+            self.assertTrue(locations, person["name"])
+            for loc in locations:
                 office = offices.get(loc["office_id"])
                 self.assertIsNotNone(office, loc["office_id"])
                 assert office is not None
@@ -393,7 +513,8 @@ class PublishedDirectoryTests(unittest.TestCase):
                 self.assertLess(office["lat"], 42.6)
                 self.assertGreater(office["lng"], -91.6)
                 self.assertLess(office["lng"], -87.0)
-                self.assertIn(loc["phone_office_id"], offices)
+                if loc["phone_office_id"]:
+                    self.assertIn(loc["phone_office_id"], offices)
 
 
 class DistanceTests(unittest.TestCase):

@@ -1,4 +1,4 @@
-"""Read the working log, the prior-year school file, and the COMS sheet."""
+"""Read the teacher logs and the credential lookup sheets."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
-from scripts.tvi_data import clean_label
+from scripts.tvi_data import clean_label, clean_source_label
 
 
 def _rows(path: Path, sheet_name: str) -> list[dict[str, str]]:
@@ -63,7 +63,7 @@ def load_prior(path: Path) -> list[dict[str, str]]:
                 "first": first,
                 "last": last,
                 "region": _cell(row, "Region"),
-                "district": _cell(row, "District"),
+                "district": clean_source_label(_cell(row, "District")),
                 "site": _cell(row, "Site"),
             }
         )
@@ -78,4 +78,64 @@ def load_coms(path: Path) -> list[dict[str, str]]:
         if not first or not last:
             continue
         people.append({"first": first, "last": last})
+    return people
+
+
+def load_catis(path: Path) -> list[dict[str, str]]:
+    people = []
+    for row in _rows(path, "CATIS lookup"):
+        first = _cell(row, "First Name")
+        last = _cell(row, "Last Name")
+        if not first or not last:
+            continue
+        people.append(
+            {
+                "first": first,
+                "last": last,
+                "employer": _cell(row, "2024-2025 employer"),
+                "county": _cell(row, "2024-2025 county"),
+                "district": clean_source_label(_cell(row, "2023-2024 district")),
+                "site": _cell(row, "2023-2024 site"),
+            }
+        )
+    return people
+
+
+def load_clvt(path: Path) -> list[dict[str, str]]:
+    people = []
+    for row in _rows(path, "CLVT lookup"):
+        first = _cell(row, "First name", "First Name")
+        last = _cell(row, "Last name", "Last Name")
+        if not first or not last:
+            continue
+        finding = _cell(row, "School or district finding")
+        people.append(
+            {
+                "first": first,
+                "last": last,
+                "employer": _cell(row, "Employer"),
+                "county": "",
+                "confirmed": finding.casefold() == "confirmed",
+                "finding": finding,
+            }
+        )
+    return people
+
+
+def load_cvrt(path: Path) -> list[dict[str, str]]:
+    people = []
+    for row in _rows(path, "IL CVRTs"):
+        first = _cell(row, "First Name")
+        last = _cell(row, "Last Name")
+        if not first or not last:
+            continue
+        people.append(
+            {
+                "first": first,
+                "last": last,
+                "employer": _cell(row, "Employer"),
+                "county": "",
+                "employer_type": _cell(row, "Employer Type"),
+            }
+        )
     return people

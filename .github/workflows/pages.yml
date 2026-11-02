@@ -24,16 +24,22 @@ jobs:
       - name: Assemble the site
         run: |
           mkdir -p site/data
-          cp index.html style.css app.js search.js robots.txt site/
-          cp data/tvis.json data/entities.json data/il_locations.json site/data/
+          cp index.html analyze.html style.css app.js search.js analyze.js map.js robots.txt site/
+          cp data/tvis.json data/entities.json data/il_locations.json data/unplaced.json data/il_counties.json data/illinois_roes.json site/data/
           test -s site/index.html
+          test -s site/analyze.html
           test -s site/style.css
           test -s site/app.js
           test -s site/search.js
+          test -s site/analyze.js
+          test -s site/map.js
           test -s site/robots.txt
           test -s site/data/tvis.json
           test -s site/data/entities.json
           test -s site/data/il_locations.json
+          test -s site/data/unplaced.json
+          test -s site/data/il_counties.json
+          test -s site/data/illinois_roes.json
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6

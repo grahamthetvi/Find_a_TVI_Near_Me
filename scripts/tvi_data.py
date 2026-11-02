@@ -77,6 +77,7 @@ ABBREVIATIONS = {
     "sp": "special",
     "st": "saint",
     "mt": "mount",
+    "nw": "northwest",
 }
 CONTENT_STOPWORDS = {"of", "the", "and", "for", "a", "in"}
 GENERIC_TOKENS = CONTENT_STOPWORDS | {
@@ -114,6 +115,12 @@ GENERIC_TOKENS = CONTENT_STOPWORDS | {
 NCES_SOURCE = "https://nces.ed.gov/programs/edge/geographic/schoollocations"
 EARTH_RADIUS_MILES = 3958.7613
 SAME_BUILDING_MILES = 0.2
+YEAR_PRIOR = "2023-2024"
+YEAR_CURRENT = "2024-2025"
+SCHOOL_YEARS = (YEAR_PRIOR, YEAR_CURRENT)
+ROLE_ORDER = ("TVI", "COMS", "CATIS", "CLVT", "CVRT")
+EMPTY_VALUES = {"", "null", "na", "none", "n/a"}
+BRACKET_NOTE = re.compile(r"\s*\[[^\]]*\]\s*")
 
 
 def write_json(path: Path, payload: object) -> None:
@@ -210,6 +217,18 @@ def clean_label(value: str) -> str:
     return re.sub(r"\s+", " ", (value or "").strip())
 
 
+def clean_source_label(value: str) -> str:
+    return clean_label(BRACKET_NOTE.sub(" ", value or ""))
+
+
+def has_value(value: str) -> bool:
+    return clean_label(value).casefold() not in EMPTY_VALUES
+
+
+def ordered_roles(roles: set[str]) -> list[str]:
+    return [role for role in ROLE_ORDER if role in roles]
+
+
 def content_tokens(expanded: str) -> set[str]:
     return {token for token in expanded.split(" ") if token and token not in CONTENT_STOPWORDS}
 
@@ -260,6 +279,8 @@ def is_cps(name: str) -> bool:
 
 def is_dhs(name: str) -> bool:
     expanded = expand_name(name)
+    if expanded.startswith("illinois "):
+        expanded = expanded[len("illinois ") :]
     return expanded == "department of human services" or expanded.startswith(
         "department of human services "
     )
@@ -463,100 +484,388 @@ def _enrichment(default: str, override: str | None) -> str:
     return default
 
 
+def county_display(hint: str | None, roes: list[dict[str, object]]) -> str:
+    if not hint:
+        return ""
+    if hint == "cook":
+        return "Cook"
+    for roe in roes:
+        counties = roe.get("counties")
+        if not isinstance(counties, list):
+            continue
+        for county in counties:
+            if county_key(str(county)) == hint:
+                return str(county)
+    return hint
+
+
+def iter_years(person: dict[str, object]) -> list[dict[str, object]]:
+    years = person.get("years")
+    if isinstance(years, dict):
+        records = []
+        for year in SCHOOL_YEARS:
+            data = years.get(year)
+            if isinstance(data, dict):
+                records.append(data)
+        return records
+    return [
+        {
+            "employers": person.get("employers") or [],
+            "schools": person.get("schools") or [],
+        }
+    ]
+
+
+def _empty_year() -> dict[str, object]:
+    return {
+        "belongs": False,
+        "tvi": False,
+        "employers": [],
+        "schools": [],
+        "seen_employers": set(),
+        "seen_schools": set(),
+        "unplaced_reason": "",
+    }
+
+
+def _ensure_person(
+    grouped: dict[tuple[str, str], dict[str, object]],
+    first: str,
+    last: str,
+) -> dict[str, object]:
+    key = name_key(first, last)
+    person = grouped.get(key)
+    if person is None:
+        person = {
+            "raw_name": (first, last),
+            "roles": set(),
+            "years": {year: _empty_year() for year in SCHOOL_YEARS},
+        }
+        grouped[key] = person
+        return person
+    person["raw_name"] = _prefer_raw_name(person["raw_name"], (first, last))  # type: ignore[arg-type]
+    return person
+
+
+def _add_employer(
+    year_data: dict[str, object],
+    name: str,
+    county: str,
+    roe: str | None,
+) -> None:
+    employer_name = clean_label(name)
+    employer_county = clean_label(county)
+    if not has_value(employer_name):
+        return
+    office_id = employer_office_id(employer_name, employer_county)
+    seen: set[str] = year_data["seen_employers"]  # type: ignore[assignment]
+    if office_id in seen:
+        return
+    seen.add(office_id)
+    employers: list[dict[str, object]] = year_data["employers"]  # type: ignore[assignment]
+    employers.append(
+        {
+            "office_id": office_id,
+            "name": employer_name,
+            "county": employer_county,
+            "roe": roe,
+            "is_cps": is_cps(employer_name),
+            "is_dhs": is_dhs(employer_name),
+        }
+    )
+
+
+def _add_school(
+    year_data: dict[str, object],
+    site: str,
+    district: str,
+    region: str,
+    fallback_employer: str,
+    employer_names: list[str],
+    employer_counties: list[str],
+    roes: list[dict[str, object]],
+) -> None:
+    site_name = clean_label(site)
+    if not has_value(site_name):
+        return
+    district_name = clean_label(district)
+    label_employer = district_name or fallback_employer
+    office_id = school_office_id(label_employer or site_name, site_name)
+    seen: set[str] = year_data["seen_schools"]  # type: ignore[assignment]
+    if office_id in seen:
+        return
+    seen.add(office_id)
+    schools: list[dict[str, object]] = year_data["schools"]  # type: ignore[assignment]
+    schools.append(
+        {
+            "office_id": office_id,
+            "site": site_name,
+            "district": district_name,
+            "label_employer": label_employer,
+            "county_hint": region_county_hint(region, roes),
+            "roe": label_for_code(region_code(region, roes), roes),
+            "employer_names": employer_names,
+            "employer_counties": employer_counties,
+        }
+    )
+
+
+def _mark_unplaced(year_data: dict[str, object], reason: str) -> None:
+    year_data["belongs"] = True
+    if not year_data["unplaced_reason"]:
+        year_data["unplaced_reason"] = reason
+
+
+def _add_credential_office(
+    person: dict[str, object],
+    year: str,
+    name: str,
+    county: str,
+    roes: list[dict[str, object]],
+    regions: list[str],
+    reason: str = "",
+) -> None:
+    year_data = person["years"][year]  # type: ignore[index]
+    year_data["belongs"] = True
+    if reason:
+        _mark_unplaced(year_data, reason)
+        return
+    if not has_value(name):
+        _mark_unplaced(year_data, "No public employer on either log")
+        return
+    _add_employer(
+        year_data,
+        name,
+        county,
+        employer_roe_label(county, name, regions, roes),
+    )
+
+
 def plan_people(
     current_rows: list[dict[str, str]],
     prior_rows: list[dict[str, str]],
     coms_rows: list[dict[str, str]],
     roes: list[dict[str, object]],
     overrides: dict[str, dict[str, str]],
+    catis_rows: list[dict[str, str]] | None = None,
+    clvt_rows: list[dict[str, str]] | None = None,
+    cvrt_rows: list[dict[str, str]] | None = None,
 ) -> list[dict[str, object]]:
     prior_by_name: dict[tuple[str, str], list[dict[str, str]]] = {}
     for row in prior_rows:
         prior_by_name.setdefault(name_key(row["first"], row["last"]), []).append(row)
-    coms_names = {name_key(row["first"], row["last"]) for row in coms_rows}
 
     grouped: dict[tuple[str, str], dict[str, object]] = {}
     for row in current_rows:
-        key = name_key(row["first"], row["last"])
-        person = grouped.get(key)
-        if person is None:
-            person = {
-                "raw_name": (row["first"], row["last"]),
-                "employers": [],
-                "seen_employers": set(),
-            }
-            grouped[key] = person
-        person["raw_name"] = _prefer_raw_name(person["raw_name"], (row["first"], row["last"]))  # type: ignore[arg-type]
-        office_id = employer_office_id(row["employer"], row["county"])
-        seen: set[str] = person["seen_employers"]  # type: ignore[assignment]
-        if office_id in seen:
-            continue
-        seen.add(office_id)
-        employers: list[dict[str, object]] = person["employers"]  # type: ignore[assignment]
-        employers.append(
-            {
-                "office_id": office_id,
-                "name": clean_label(row["employer"]),
-                "county": clean_label(row["county"]),
-            }
+        person = _ensure_person(grouped, row["first"], row["last"])
+        roles: set[str] = person["roles"]  # type: ignore[assignment]
+        roles.add("TVI")
+        year_data = person["years"][YEAR_CURRENT]  # type: ignore[index]
+        year_data["belongs"] = True
+        year_data["tvi"] = True
+        prior = prior_by_name.get(name_key(row["first"], row["last"]), [])
+        prior_regions = [item["region"] for item in prior if item.get("region")]
+        _add_employer(
+            year_data,
+            row["employer"],
+            row["county"],
+            employer_roe_label(row["county"], row["employer"], prior_regions, roes),
         )
 
-    people: list[dict[str, object]] = []
+    for row in prior_rows:
+        person = _ensure_person(grouped, row["first"], row["last"])
+        roles = person["roles"]  # type: ignore[assignment]
+        roles.add("TVI")
+        year_data = person["years"][YEAR_PRIOR]  # type: ignore[index]
+        year_data["belongs"] = True
+        year_data["tvi"] = True
+        district = row.get("district", "")
+        site = row.get("site", "")
+        region = row.get("region", "")
+        if has_value(district):
+            county = county_display(region_county_hint(region, roes), roes)
+            _add_employer(
+                year_data,
+                district,
+                county,
+                label_for_code(region_code(region, roes), roes),
+            )
+        elif not has_value(site):
+            _mark_unplaced(year_data, "No district or school on the 2023–2024 log")
+        if has_value(site):
+            employers: list[dict[str, object]] = year_data["employers"]  # type: ignore[assignment]
+            fallback = str(employers[0]["name"]) if len(employers) == 1 else ""
+            _add_school(
+                year_data,
+                site,
+                district,
+                region,
+                fallback,
+                [str(item["name"]) for item in employers],
+                [str(item["county"]) for item in employers],
+                roes,
+            )
+
     for key, person in grouped.items():
+        current_year = person["years"][YEAR_CURRENT]  # type: ignore[index]
+        if not current_year["belongs"]:
+            continue
+        employers = current_year["employers"]  # type: ignore[assignment]
+        non_dhs = [item for item in employers if not item["is_dhs"]]
+        fallback_employer = str(non_dhs[0]["name"]) if len(non_dhs) == 1 else ""
+        for row in prior_by_name.get(key, []):
+            _add_school(
+                current_year,
+                row.get("site", ""),
+                row.get("district", ""),
+                row.get("region", ""),
+                fallback_employer,
+                [str(item["name"]) for item in employers],
+                [str(item["county"]) for item in employers],
+                roes,
+            )
+
+    for row in coms_rows:
+        person = _ensure_person(grouped, row["first"], row["last"])
+        roles = person["roles"]  # type: ignore[assignment]
+        roles.add("COMS")
+
+    for row in catis_rows or []:
+        person = _ensure_person(grouped, row["first"], row["last"])
+        roles = person["roles"]  # type: ignore[assignment]
+        roles.add("CATIS")
+        prior = prior_by_name.get(name_key(row["first"], row["last"]), [])
+        prior_regions = [item["region"] for item in prior if item.get("region")]
+        current_year = person["years"][YEAR_CURRENT]  # type: ignore[index]
+        prior_year = person["years"][YEAR_PRIOR]  # type: ignore[index]
+        if has_value(row.get("employer", "")) and not current_year["employers"]:
+            _add_credential_office(
+                person,
+                YEAR_CURRENT,
+                row["employer"],
+                row.get("county", ""),
+                roes,
+                prior_regions,
+            )
+        if has_value(row.get("district", "")) and not prior_year["employers"] and not prior_year["schools"]:
+            county = county_display(
+                region_county_hint(prior[0]["region"], roes) if prior else None,
+                roes,
+            )
+            _add_credential_office(
+                person,
+                YEAR_PRIOR,
+                row["district"],
+                county,
+                roes,
+                prior_regions,
+            )
+            if has_value(row.get("site", "")):
+                employers = prior_year["employers"]  # type: ignore[assignment]
+                _add_school(
+                    prior_year,
+                    row.get("site", ""),
+                    row["district"],
+                    prior[0]["region"] if prior else "",
+                    str(employers[0]["name"]) if employers else "",
+                    [str(item["name"]) for item in employers],
+                    [str(item["county"]) for item in employers],
+                    roes,
+                )
+        if not current_year["belongs"] and not prior_year["belongs"]:
+            _mark_unplaced(current_year, "No public employer on either log")
+            _mark_unplaced(prior_year, "No public employer on either log")
+
+    for row in clvt_rows or []:
+        person = _ensure_person(grouped, row["first"], row["last"])
+        roles = person["roles"]  # type: ignore[assignment]
+        roles.add("CLVT")
+        reason = ""
+        if row.get("confirmed") in {True, "True", "true"}:
+            reason = ""
+        elif has_value(row.get("employer", "")):
+            reason = "Employer needs a hand check"
+        else:
+            reason = "No public employer on either log"
+        current_year = person["years"][YEAR_CURRENT]  # type: ignore[index]
+        prior_year = person["years"][YEAR_PRIOR]  # type: ignore[index]
+        if reason:
+            if not current_year["belongs"] and not current_year["employers"]:
+                current_year["belongs"] = True
+                _mark_unplaced(current_year, reason)
+            if not prior_year["belongs"] and not prior_year["employers"]:
+                prior_year["belongs"] = True
+                _mark_unplaced(prior_year, reason)
+            continue
+        for year in SCHOOL_YEARS:
+            year_data = person["years"][year]  # type: ignore[index]
+            if year_data["employers"] or year_data["schools"]:
+                continue
+            _add_credential_office(
+                person, year, row.get("employer", ""), row.get("county", ""), roes, []
+            )
+
+    for row in cvrt_rows or []:
+        person = _ensure_person(grouped, row["first"], row["last"])
+        roles = person["roles"]  # type: ignore[assignment]
+        roles.add("CVRT")
+        employer = row.get("employer", "")
+        reason = ""
+        if not has_value(employer):
+            reason = "No public employer on either log"
+        elif is_dhs(employer):
+            reason = "Department of Human Services is not used as a map point"
+        for year in SCHOOL_YEARS:
+            year_data = person["years"][year]  # type: ignore[index]
+            if year_data["employers"] or year_data["schools"]:
+                continue
+            if reason:
+                year_data["belongs"] = True
+                _mark_unplaced(year_data, reason)
+                continue
+            _add_credential_office(person, year, employer, row.get("county", ""), roes, [])
+
+    for row in coms_rows:
+        person = grouped[name_key(row["first"], row["last"])]
+        current_year = person["years"][YEAR_CURRENT]  # type: ignore[index]
+        prior_year = person["years"][YEAR_PRIOR]  # type: ignore[index]
+        if current_year["belongs"] or prior_year["belongs"]:
+            continue
+        current_year["belongs"] = True
+        prior_year["belongs"] = True
+        _mark_unplaced(current_year, "No public employer on either log")
+        _mark_unplaced(prior_year, "No public employer on either log")
+
+    people: list[dict[str, object]] = []
+    for person in grouped.values():
         raw_first, raw_last = person["raw_name"]  # type: ignore[misc]
         person_id = slug(display_name(raw_first, raw_last))
-        prior = prior_by_name.get(key, [])
-        prior_regions = [row["region"] for row in prior if row.get("region")]
-        employers = []
-        for employer in person["employers"]:  # type: ignore[union-attr]
-            name = str(employer["name"])
-            county = str(employer["county"])
-            employers.append(
-                {
-                    **employer,
-                    "roe": employer_roe_label(county, name, prior_regions, roes),
-                    "is_cps": is_cps(name),
-                    "is_dhs": is_dhs(name),
-                }
-            )
-        non_dhs = [item for item in employers if not item["is_dhs"]]
-        fallback_employer = non_dhs[0]["name"] if len(non_dhs) == 1 else ""
-        schools = []
-        seen_schools: set[str] = set()
-        for row in prior:
-            site = clean_label(row.get("site", ""))
-            if not site:
-                continue
-            district = clean_label(row.get("district", ""))
-            label_employer = district or str(fallback_employer)
-            office_id = school_office_id(label_employer or site, site)
-            if office_id in seen_schools:
-                continue
-            seen_schools.add(office_id)
-            region = row.get("region", "")
-            schools.append(
-                {
-                    "office_id": office_id,
-                    "site": site,
-                    "district": district,
-                    "label_employer": label_employer,
-                    "county_hint": region_county_hint(region, roes),
-                    "roe": label_for_code(region_code(region, roes), roes),
-                    "employer_names": [item["name"] for item in employers],
-                    "employer_counties": [item["county"] for item in employers],
-                }
-            )
-        default_om = "Yes" if key in coms_names else "Not listed"
-        default_ei = "Yes" if any(item["is_dhs"] for item in employers) else "Not listed"
+        years = {}
+        any_dhs = False
+        for year in SCHOOL_YEARS:
+            year_data = person["years"][year]  # type: ignore[index]
+            employers = year_data["employers"]  # type: ignore[assignment]
+            if any(item["is_dhs"] for item in employers):
+                any_dhs = True
+            years[year] = {
+                "belongs": year_data["belongs"],
+                "tvi": year_data["tvi"],
+                "employers": employers,
+                "schools": year_data["schools"],
+                "unplaced_reason": year_data["unplaced_reason"],
+            }
+        roles = ordered_roles(person["roles"])  # type: ignore[arg-type]
+        default_om = "Yes" if "COMS" in roles else "Not listed"
+        default_ei = "Yes" if any_dhs else "Not listed"
         people.append(
             {
                 "id": person_id,
                 "name": display_name(raw_first, raw_last),
+                "roles": roles,
                 "om": _enrichment(default_om, overrides.get("om", {}).get(person_id)),
                 "ei": _enrichment(default_ei, overrides.get("ei", {}).get(person_id)),
                 "linkedin": overrides.get("linkedin", {}).get(person_id) or "Not listed",
-                "employers": employers,
-                "schools": schools,
+                "years": years,
             }
         )
     people.sort(key=lambda item: str(item["name"]))
@@ -593,27 +902,48 @@ def match_employer(
             return in_county[0]
         return None
 
-    scored: list[tuple[float, dict[str, object]]] = []
-    for lea in leas:
-        if lea.get("county") != county_name:
-            continue
+    def _score_lea(lea: dict[str, object]) -> float | None:
         if not in_illinois(lea.get("lat"), lea.get("lng")):  # type: ignore[arg-type]
-            continue
+            return None
         lea_expanded = str(lea.get("expanded") or "")
         lea_numbers = lea.get("numbers")
         if not isinstance(lea_numbers, frozenset):
             lea_numbers = district_numbers(lea_expanded)
         if not _numbers_compatible(query_numbers, lea_numbers):
-            continue
+            return None
         lea_content = content_tokens(lea_expanded)
         lea_words = distinctive_words(lea_expanded)
         score = jaccard(query_content, lea_content)
         shared_words = query_words & lea_words
         same_number = bool(query_numbers) and query_numbers == lea_numbers
         if shared_words and same_number and score >= 0.5:
-            scored.append((score, lea))
-        elif shared_words and score >= 0.66:
-            scored.append((score, lea))
+            return score
+        if shared_words and score >= 0.66:
+            return score
+        return None
+
+    if not county_name:
+        statewide: list[tuple[float, dict[str, object]]] = []
+        for lea in leas:
+            score = _score_lea(lea)
+            if score is None:
+                continue
+            statewide.append((score, lea))
+        if not statewide:
+            return None
+        statewide.sort(key=lambda item: (-item[0], str(item[1].get("name"))))
+        if len(statewide) > 1 and statewide[1][0] >= statewide[0][0] - 0.08:
+            return None
+        return statewide[0][1]
+
+    scored: list[tuple[float, dict[str, object]]] = []
+    for lea in leas:
+        if lea.get("county") != county_name:
+            continue
+        score = _score_lea(lea)
+        if score is None:
+            continue
+        scored.append((score, lea))
     if not scored and query_numbers and query_words:
         # "CUSD 308" in Oswego carries the place name on the city, not the title.
         city_hits: list[dict[str, object]] = []
@@ -720,157 +1050,264 @@ def label_from_office_county(
     return fallback
 
 
+def year_omitted_note(year: str, omitted: int, dhs_people: int, other_people: int) -> str:
+    label = year.replace("-", "–")
+    if omitted == 1:
+        note = f"1 person on the {label} log is not in this search."
+    else:
+        note = f"{omitted} people on the {label} log are not in this search."
+    if dhs_people == 1:
+        note += (
+            " 1 works for the Department of Human Services and is left off the map "
+            "unless a school building is known."
+        )
+    elif dhs_people > 1:
+        note += (
+            f" {dhs_people} work for the Department of Human Services and are left off the map "
+            "unless a school building is known."
+        )
+    if other_people == 1:
+        note += " 1 has an employer that could not be matched to a public office."
+    elif other_people > 1:
+        note += (
+            f" {other_people} have an employer that could not be matched to a public office."
+        )
+    return note
+
+
+def _place_year(
+    year_data: dict[str, object],
+    cache: dict[str, dict[str, object]],
+    overrides: dict[str, dict[str, str]],
+    roes: list[dict[str, object]] | None,
+    offices: dict[str, dict[str, object]],
+) -> tuple[list[dict[str, object]], str]:
+    """Return locations for one school year and a reason when none can be used."""
+    employers: list[dict[str, object]] = year_data.get("employers") or []  # type: ignore[assignment]
+    schools: list[dict[str, object]] = year_data.get("schools") or []  # type: ignore[assignment]
+    employer_points: list[dict[str, object]] = []
+    dhs_only = False
+    unmatched = False
+    for employer in employers:
+        office_id = str(employer["office_id"])
+        if employer["is_dhs"]:
+            dhs_only = True
+            continue
+        cached = cache.get(office_id)
+        if not cached or not in_illinois(cached.get("lat"), cached.get("lng")):  # type: ignore[arg-type]
+            unmatched = True
+            continue
+        phone = overrides.get("phones", {}).get(office_id) or "Not listed"
+        office = _office_shell(
+            office_id,
+            str(employer["name"]),
+            str(employer["county"]),
+            str(cached.get("kind") or "district_office"),
+            float(cached["lat"]),
+            float(cached["lng"]),
+            str(cached.get("address") or ""),
+            str(cached.get("source_url") or ""),
+            str(cached.get("matched_name") or ""),
+            phone,
+        )
+        offices[office_id] = office
+        detail = "district office" if employer["is_cps"] else None
+        employer_roe = label_from_office_county(
+            str(cached.get("county") or employer["county"]),
+            employer.get("roe") if isinstance(employer.get("roe"), str) else None,
+            roes,
+        )
+        employer_points.append(
+            {
+                "office_id": office_id,
+                "phone_office_id": office_id,
+                "label": location_label(str(employer["name"]), detail, employer_roe),
+                "roe": employer_roe or "",
+                "is_cps": employer["is_cps"],
+                "lat": office["lat"],
+                "lng": office["lng"],
+            }
+        )
+    school_points: list[dict[str, object]] = []
+    for school in schools:
+        office_id = str(school["office_id"])
+        cached = cache.get(office_id)
+        if not cached or not in_illinois(cached.get("lat"), cached.get("lng")):  # type: ignore[arg-type]
+            continue
+        label_employer = str(school.get("label_employer") or "")
+        phone_office_id = ""
+        for employer in employers:
+            office_id_employer = str(employer["office_id"])
+            if employer["name"] == label_employer and not employer["is_dhs"] and office_id_employer in offices:
+                phone_office_id = office_id_employer
+                break
+        if not phone_office_id:
+            for employer in employers:
+                office_id_employer = str(employer["office_id"])
+                if not employer["is_dhs"] and office_id_employer in offices:
+                    phone_office_id = office_id_employer
+                    break
+        school_name = str(cached.get("matched_name") or school["site"])
+        school_roe = label_from_office_county(
+            str(cached.get("county") or ""),
+            school.get("roe") if isinstance(school.get("roe"), str) else None,
+            roes,
+        )
+        office = _office_shell(
+            office_id,
+            school_name,
+            str(cached.get("county") or ""),
+            "school",
+            float(cached["lat"]),
+            float(cached["lng"]),
+            str(cached.get("address") or ""),
+            str(cached.get("source_url") or NCES_SOURCE),
+            school_name,
+            "Not listed",
+        )
+        offices[office_id] = office
+        school_points.append(
+            {
+                "office_id": office_id,
+                "phone_office_id": phone_office_id,
+                "label": location_label(label_employer, school_name, school_roe),
+                "roe": school_roe or "",
+                "lat": office["lat"],
+                "lng": office["lng"],
+            }
+        )
+    if school_points:
+        employer_points = [point for point in employer_points if not point["is_cps"]]
+        kept_employers = []
+        for point in employer_points:
+            near_school = False
+            for school_point in school_points:
+                distance = haversine_miles(
+                    float(point["lat"]),
+                    float(point["lng"]),
+                    float(school_point["lat"]),
+                    float(school_point["lng"]),
+                )
+                if distance <= SAME_BUILDING_MILES:
+                    near_school = True
+                    break
+            if not near_school:
+                kept_employers.append(point)
+        employer_points = kept_employers
+    locations: list[dict[str, object]] = []
+    for point in employer_points + school_points:
+        locations.append(
+            {
+                "office_id": point["office_id"],
+                "phone_office_id": point["phone_office_id"],
+                "label": point["label"],
+                "roe": point.get("roe") or "",
+            }
+        )
+    locations.sort(key=lambda item: str(item["label"]))
+    if locations:
+        return locations, ""
+    planned_reason = str(year_data.get("unplaced_reason") or "")
+    if planned_reason:
+        return [], planned_reason
+    if dhs_only and not unmatched:
+        return [], "Department of Human Services is not used as a map point"
+    if unmatched or employers or schools:
+        return [], "No confident public office match"
+    if year_data.get("belongs"):
+        return [], "No public employer on either log"
+    return [], ""
+
+
 def compile_directory(
     people: list[dict[str, object]],
     cache: dict[str, dict[str, object]],
     overrides: dict[str, dict[str, str]],
     roes: list[dict[str, object]] | None = None,
-) -> tuple[list[dict[str, object]], list[dict[str, object]], list[dict[str, object]], int]:
+) -> tuple[
+    list[dict[str, object]],
+    list[dict[str, object]],
+    list[dict[str, object]],
+    dict[str, dict[str, object]],
+]:
     """Attach cached coordinates and drop offices the search must not use."""
     placed_people: list[dict[str, object]] = []
     offices: dict[str, dict[str, object]] = {}
-    unplaced: dict[str, dict[str, object]] = {}
-    omitted = 0
+    unplaced_people: list[dict[str, object]] = []
+    omitted_counts = {year: 0 for year in SCHOOL_YEARS}
+    dhs_counts = {year: 0 for year in SCHOOL_YEARS}
+    other_counts = {year: 0 for year in SCHOOL_YEARS}
 
     for person in people:
-        locations: list[dict[str, object]] = []
-        employer_points: list[dict[str, object]] = []
-        for employer in person["employers"]:  # type: ignore[union-attr]
-            office_id = str(employer["office_id"])
-            if employer["is_dhs"]:
-                unplaced[office_id] = {
-                    "name": employer["name"],
-                    "county": employer["county"],
-                    "people": unplaced.get(office_id, {}).get("people", 0) + 1,
-                    "reason": "Department of Human Services is not used as a map point",
+        year_locations: dict[str, list[dict[str, object]]] = {}
+        roles = person.get("roles") or ["TVI"]
+        if not isinstance(roles, list):
+            roles = ["TVI"]
+        planned_years = person.get("years")
+        if not isinstance(planned_years, dict):
+            planned_years = {
+                YEAR_CURRENT: {
+                    "belongs": True,
+                    "tvi": True,
+                    "employers": person.get("employers") or [],
+                    "schools": person.get("schools") or [],
+                    "unplaced_reason": "",
                 }
-                continue
-            cached = cache.get(office_id)
-            if not cached or not in_illinois(cached.get("lat"), cached.get("lng")):  # type: ignore[arg-type]
-                current = unplaced.get(office_id, {})
-                unplaced[office_id] = {
-                    "name": employer["name"],
-                    "county": employer["county"],
-                    "people": current.get("people", 0) + 1,
-                    "reason": "No confident public office match",
+            }
+        for year in SCHOOL_YEARS:
+            year_data = planned_years.get(year)
+            if not isinstance(year_data, dict):
+                year_data = {
+                    "belongs": False,
+                    "tvi": False,
+                    "employers": [],
+                    "schools": [],
+                    "unplaced_reason": "",
                 }
-                continue
-            phone = overrides.get("phones", {}).get(office_id) or "Not listed"
-            office = _office_shell(
-                office_id,
-                str(employer["name"]),
-                str(employer["county"]),
-                str(cached.get("kind") or "district_office"),
-                float(cached["lat"]),
-                float(cached["lng"]),
-                str(cached.get("address") or ""),
-                str(cached.get("source_url") or ""),
-                str(cached.get("matched_name") or ""),
-                phone,
-            )
-            offices[office_id] = office
-            detail = "district office" if employer["is_cps"] else None
-            employer_roe = label_from_office_county(
-                str(cached.get("county") or employer["county"]),
-                employer.get("roe") if isinstance(employer.get("roe"), str) else None,
-                roes,
-            )
-            employer_points.append(
-                {
-                    "office_id": office_id,
-                    "phone_office_id": office_id,
-                    "label": location_label(str(employer["name"]), detail, employer_roe),
-                    "is_cps": employer["is_cps"],
-                    "lat": office["lat"],
-                    "lng": office["lng"],
-                }
-            )
-        school_points: list[dict[str, object]] = []
-        for school in person["schools"]:  # type: ignore[union-attr]
-            office_id = str(school["office_id"])
-            cached = cache.get(office_id)
-            if not cached or not in_illinois(cached.get("lat"), cached.get("lng")):  # type: ignore[arg-type]
-                continue
-            label_employer = str(school.get("label_employer") or "")
-            phone_office_id = ""
-            for employer in person["employers"]:  # type: ignore[union-attr]
-                if employer["name"] == label_employer and not employer["is_dhs"]:
-                    phone_office_id = str(employer["office_id"])
-                    break
-            if not phone_office_id:
-                for employer in person["employers"]:  # type: ignore[union-attr]
-                    if not employer["is_dhs"]:
-                        phone_office_id = str(employer["office_id"])
-                        break
-            school_name = str(cached.get("matched_name") or school["site"])
-            school_roe = label_from_office_county(
-                str(cached.get("county") or ""),
-                school.get("roe") if isinstance(school.get("roe"), str) else None,
-                roes,
-            )
-            office = _office_shell(
-                office_id,
-                school_name,
-                str(cached.get("county") or ""),
-                "school",
-                float(cached["lat"]),
-                float(cached["lng"]),
-                str(cached.get("address") or ""),
-                str(cached.get("source_url") or NCES_SOURCE),
-                school_name,
-                "Not listed",
-            )
-            offices[office_id] = office
-            school_points.append(
-                {
-                    "office_id": office_id,
-                    "phone_office_id": phone_office_id,
-                    "label": location_label(label_employer, school_name, school_roe),
-                    "lat": office["lat"],
-                    "lng": office["lng"],
-                }
-            )
-        if school_points:
-            employer_points = [point for point in employer_points if not point["is_cps"]]
-            kept_employers = []
-            for point in employer_points:
-                near_school = False
-                for school_point in school_points:
-                    distance = haversine_miles(
-                        float(point["lat"]),
-                        float(point["lng"]),
-                        float(school_point["lat"]),
-                        float(school_point["lng"]),
-                    )
-                    if distance <= SAME_BUILDING_MILES:
-                        near_school = True
-                        break
-                if not near_school:
-                    kept_employers.append(point)
-            employer_points = kept_employers
-        for point in employer_points + school_points:
-            locations.append(
-                {
-                    "office_id": point["office_id"],
-                    "phone_office_id": point["phone_office_id"],
-                    "label": point["label"],
-                }
-            )
-        if not locations:
-            omitted += 1
+            locations, reason = _place_year(year_data, cache, overrides, roes, offices)
+            year_locations[year] = locations
+            belongs = bool(year_data.get("belongs"))
+            tvi_log = bool(year_data.get("tvi"))
+            if belongs and not locations:
+                unplaced_people.append(
+                    {
+                        "id": person["id"],
+                        "name": person["name"],
+                        "roles": roles,
+                        "year": year,
+                        "tvi": tvi_log,
+                        "reason": reason or "No confident public office match",
+                    }
+                )
+                if tvi_log:
+                    omitted_counts[year] += 1
+                    if str(reason).startswith("Department of Human Services"):
+                        dhs_counts[year] += 1
+                    elif reason == "No confident public office match":
+                        other_counts[year] += 1
+        if not any(year_locations[year] for year in SCHOOL_YEARS):
             continue
-        locations.sort(key=lambda item: str(item["label"]))
         placed_people.append(
             {
                 "id": person["id"],
                 "name": person["name"],
+                "roles": roles,
                 "om": person["om"],
                 "ei": person["ei"],
                 "linkedin": person["linkedin"],
-                "locations": locations,
+                "years": year_locations,
             }
         )
 
+    stats = {
+        year: {
+            "omitted_people": omitted_counts[year],
+            "omitted_note": year_omitted_note(
+                year, omitted_counts[year], dhs_counts[year], other_counts[year]
+            ),
+        }
+        for year in SCHOOL_YEARS
+    }
     office_list = sorted(offices.values(), key=lambda item: str(item["id"]))
-    unplaced_list = sorted(unplaced.values(), key=lambda item: (-int(item["people"]), str(item["name"])))
-    return placed_people, office_list, unplaced_list, omitted
+    unplaced_people.sort(key=lambda item: (str(item["year"]), str(item["name"])))
+    return placed_people, office_list, unplaced_people, stats

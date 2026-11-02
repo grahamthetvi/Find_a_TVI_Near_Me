@@ -102,3 +102,56 @@ test("search keeps the closer office and honors the limits", () => {
     ["Ada Lovelace"],
   );
 });
+
+test("year and credential filters keep the matching offices", () => {
+  const people = [
+    {
+      name: "Ada Lovelace",
+      roles: ["TVI", "COMS"],
+      om: "Yes",
+      ei: "Not listed",
+      years: {
+        "2024-2025": [{ office_id: "near", phone_office_id: "near", label: "Ada 2025" }],
+        "2023-2024": [{ office_id: "far", phone_office_id: "far", label: "Ada 2024" }],
+      },
+    },
+    {
+      name: "Ana Leffel",
+      roles: ["CLVT"],
+      om: "Not listed",
+      ei: "Not listed",
+      years: {
+        "2024-2025": [{ office_id: "near", phone_office_id: "near", label: "Ana office" }],
+        "2023-2024": [],
+      },
+    },
+  ];
+  const offices = indexOffices({
+    offices: [
+      { id: "far", lat: 42, lng: -87, phone: "Not listed" },
+      { id: "near", lat: 40.1, lng: -89, phone: "217-555-0100" },
+    ],
+  });
+  const tviCurrent = nearestPeople(people, offices, { lat: 40, lng: -89 }, {
+    year: "2024-2025",
+    roles: ["TVI"],
+  });
+  assert.deepEqual(
+    tviCurrent.map((row) => row.person.name),
+    ["Ada Lovelace"],
+  );
+  assert.equal(tviCurrent[0].loc.label, "Ada 2025");
+  const prior = nearestPeople(people, offices, { lat: 40, lng: -89 }, {
+    year: "2023-2024",
+    roles: ["TVI"],
+  });
+  assert.equal(prior[0].loc.label, "Ada 2024");
+  const clvt = nearestPeople(people, offices, { lat: 40, lng: -89 }, {
+    year: "2024-2025",
+    roles: ["CLVT"],
+  });
+  assert.deepEqual(
+    clvt.map((row) => row.person.name),
+    ["Ana Leffel"],
+  );
+});
