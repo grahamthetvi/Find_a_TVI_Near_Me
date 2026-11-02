@@ -1,9 +1,8 @@
 import {
   fallbackInText,
-  hasHouseNumber,
   indexOffices,
   nearestPeople,
-  resolveLocalQuery,
+  resolveOffline,
 } from "./search.js";
 
 const form = document.querySelector("#search-form");
@@ -199,8 +198,8 @@ async function locate(query) {
   if (!places) {
     return { status: "missing" };
   }
-  const local = resolveLocalQuery(query, places);
-  if (local.status !== "missing" || !hasHouseNumber(query)) {
+  const local = resolveOffline(query, places);
+  if (local.status !== "street") {
     return local;
   }
   try {

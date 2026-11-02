@@ -7,6 +7,7 @@ import {
   nearestPeople,
   normalizePlace,
   resolveLocalQuery,
+  resolveOffline,
   indexOffices,
 } from "../search.js";
 
@@ -48,6 +49,15 @@ test("a ZIP, a city, and an ambiguous city resolve locally", () => {
   const ambiguous = resolveLocalQuery("Wilmington", places);
   assert.equal(ambiguous.status, "ambiguous");
   assert.equal(resolveLocalQuery("Nowhere", places).status, "missing");
+});
+
+test("a city plus ZIP resolves from the ZIP when it is not a street", () => {
+  const found = resolveOffline("Springfield, IL 62704", places);
+  assert.equal(found.status, "ok");
+  assert.equal(found.label, "62704");
+  assert.equal(found.how, "zip");
+  assert.equal(resolveOffline("100 W Randolph St, Chicago, IL 60601", places).status, "street");
+  assert.equal(resolveOffline("Nowhere special", places).status, "missing");
 });
 
 test("a street that fails still finds the ZIP or city inside it", () => {

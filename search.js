@@ -97,6 +97,25 @@ export function resolveLocalQuery(query, places) {
 }
 
 /**
+ * Resolve a query from the local gazetteer.
+ * A house-numbered street is left as `street` so the page can try the Census
+ * geocoder. Any other miss uses a ZIP or city written inside the text.
+ *
+ * @param {string} query
+ * @param {{places: Array<{name: string, key: string, lat: number, lng: number}>, zips: Record<string, {lat: number, lng: number}>}} places
+ */
+export function resolveOffline(query, places) {
+  const local = resolveLocalQuery(query, places);
+  if (local.status !== "missing") {
+    return local;
+  }
+  if (hasHouseNumber(query)) {
+    return { status: "street" };
+  }
+  return fallbackInText(query, places);
+}
+
+/**
  * @param {string} query
  * @param {{places: Array<{name: string, key: string, lat: number, lng: number}>, zips: Record<string, {lat: number, lng: number}>}} places
  */

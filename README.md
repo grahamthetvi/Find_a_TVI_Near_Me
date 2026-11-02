@@ -6,7 +6,7 @@ A static search for the ten Teachers of the Visually Impaired whose public Illin
 
 ## Website
 
-The visitor enters an Illinois city, ZIP code, or street address. A city or ZIP is resolved in the browser from `data/il_locations.json`. A street address is sent to the Census geocoder, which does not allow a web page to call it, so the search uses a ZIP code or city written in that same address. The page ranks offices with the haversine formula and shows ten rows.
+The visitor enters an Illinois city, ZIP code, or street address. A city or ZIP is resolved in the browser from `data/il_locations.json`, including a ZIP or city written inside a longer query. A street address is also sent to the Census geocoder. That service does not allow a web page to call it, so a failed street lookup uses the ZIP code or city in the same address. The page ranks offices with the haversine formula and shows ten rows.
 
 Distance is to a public employer office, never to a home and never to the center of a county. The Regional Office of Education is a label on the row. Cook stays split: City of Chicago, North Cook, West Cook, and South Cook. Chicago Public Schools uses a 2023–2024 school building when that building matches, and otherwise says “district office.” A cooperative office may not be the town where an itinerant teacher sees students.
 
@@ -27,6 +27,8 @@ python3 scripts/build_data.py
 python3 -m unittest scripts.test_tvi_data
 node --test tests/search.test.mjs
 ```
+
+`.github/workflows/test.yml` runs those two commands on every push and pull request. The rebuild and lookup scripts stay off that workflow: the rebuild downloads public location files, and the lookup scripts write back into a workbook.
 
 `build_locations.py` reads the Census place and ZCTA gazetteers. `geocode_entities.py` reads the NCES EDGE 2023–24 district and school files, the IPEDS directory for three universities, and the Census geocoder for two state campuses. It writes `data/geocode_cache.json` and does not invent a coordinate. `build_data.py` writes `data/illinois_roes.json`, `data/entities.json`, and `data/tvis.json`.
 

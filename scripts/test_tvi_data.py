@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import unittest
 from pathlib import Path
 
@@ -367,6 +368,32 @@ class OfficeCountyLabelTests(unittest.TestCase):
         )
         self.assertIn("Bureau, Henry, and Stark ROE", placed[0]["locations"][0]["label"])
         self.assertNotIn("DeKalb", placed[0]["locations"][0]["label"])
+
+
+class PublishedDirectoryTests(unittest.TestCase):
+    def test_every_search_row_points_at_an_illinois_office(self) -> None:
+        tvis = json.loads((ROOT / "data" / "tvis.json").read_text(encoding="utf-8"))
+        entities = json.loads((ROOT / "data" / "entities.json").read_text(encoding="utf-8"))
+        places = json.loads((ROOT / "data" / "il_locations.json").read_text(encoding="utf-8"))
+        offices = {office["id"]: office for office in entities["offices"]}
+        self.assertEqual(len(offices), len(entities["offices"]))
+        self.assertGreater(len(tvis["people"]), 0)
+        self.assertGreater(len(places["places"]), 0)
+        self.assertGreater(len(places["zips"]), 0)
+        person_ids = [person["id"] for person in tvis["people"]]
+        self.assertEqual(len(person_ids), len(set(person_ids)))
+        self.assertIn(str(tvis["omitted_people"]), tvis["omitted_note"])
+        for person in tvis["people"]:
+            self.assertTrue(person["locations"], person["name"])
+            for loc in person["locations"]:
+                office = offices.get(loc["office_id"])
+                self.assertIsNotNone(office, loc["office_id"])
+                assert office is not None
+                self.assertGreater(office["lat"], 36.9)
+                self.assertLess(office["lat"], 42.6)
+                self.assertGreater(office["lng"], -91.6)
+                self.assertLess(office["lng"], -87.0)
+                self.assertIn(loc["phone_office_id"], offices)
 
 
 class DistanceTests(unittest.TestCase):
