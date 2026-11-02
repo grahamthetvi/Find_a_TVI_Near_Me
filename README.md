@@ -16,7 +16,7 @@ Of 379 people on the working log, 366 are in the search. Thirteen are left out: 
 
 `robots.txt` asks crawlers to skip `data/`. The workbooks are already in this public repository, so that file does not hide them.
 
-GitHub Pages serves the repository root: `index.html`, `style.css`, `app.js`, and `data/`. In the repository settings, set Pages to deploy from the branch root.
+`.github/workflows/pages.yml` publishes the search page when `main` changes. The published site is `index.html`, `style.css`, `app.js`, `search.js`, `robots.txt`, and the three JSON files the page loads. In the repository settings, set Pages to GitHub Actions.
 
 Rebuild from the repository root after `pip install -r requirements.txt`:
 
@@ -28,7 +28,7 @@ python3 -m unittest scripts.test_tvi_data
 node --test tests/search.test.mjs
 ```
 
-`.github/workflows/test.yml` runs those two commands on every push and pull request. The rebuild and lookup scripts stay off that workflow: the rebuild downloads public location files, and the lookup scripts write back into a workbook.
+`.github/workflows/test.yml` runs those two commands on every push and pull request. The Pages workflow publishes the committed page and does not rerun the rebuild. The lookup scripts stay off both workflows because they write back into a workbook.
 
 `build_locations.py` reads the Census place and ZCTA gazetteers. `geocode_entities.py` reads the NCES EDGE 2023–24 district and school files, the IPEDS directory for three universities, and the Census geocoder for two state campuses. It writes `data/geocode_cache.json` and does not invent a coordinate. `build_data.py` writes `data/illinois_roes.json`, `data/entities.json`, and `data/tvis.json`.
 
