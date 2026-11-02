@@ -1,0 +1,385 @@
+{
+  "regions": [
+    {
+      "roe_code": "01",
+      "type": "ROE",
+      "label": "Adams, Pike, Brown, Cass, Morgan, and Scott ROE",
+      "counties": [
+        "Adams",
+        "Pike",
+        "Brown",
+        "Cass",
+        "Morgan",
+        "Scott"
+      ]
+    },
+    {
+      "roe_code": "03",
+      "type": "ROE",
+      "label": "Christian, Montgomery, Bond, Effingham, and Fayette ROE",
+      "counties": [
+        "Christian",
+        "Montgomery",
+        "Bond",
+        "Effingham",
+        "Fayette"
+      ]
+    },
+    {
+      "roe_code": "04",
+      "type": "ROE",
+      "label": "Boone and Winnebago ROE",
+      "counties": [
+        "Boone",
+        "Winnebago"
+      ]
+    },
+    {
+      "roe_code": "05",
+      "type": "ISC",
+      "label": "North Cook",
+      "counties": [
+        "Cook"
+      ]
+    },
+    {
+      "roe_code": "06",
+      "type": "ISC",
+      "label": "West Cook",
+      "counties": [
+        "Cook"
+      ]
+    },
+    {
+      "roe_code": "07",
+      "type": "ISC",
+      "label": "South Cook",
+      "counties": [
+        "Cook"
+      ]
+    },
+    {
+      "roe_code": "08",
+      "type": "ROE",
+      "label": "Carroll, Jo Daviess, and Stephenson ROE",
+      "counties": [
+        "Carroll",
+        "Jo Daviess",
+        "Stephenson"
+      ]
+    },
+    {
+      "roe_code": "09",
+      "type": "ROE",
+      "label": "Champaign and Ford ROE",
+      "counties": [
+        "Champaign",
+        "Ford"
+      ]
+    },
+    {
+      "roe_code": "11",
+      "type": "ROE",
+      "label": "Clark, Coles, Cumberland, Douglas, Edgar, Moultrie, and Shelby ROE",
+      "counties": [
+        "Clark",
+        "Coles",
+        "Cumberland",
+        "Douglas",
+        "Edgar",
+        "Moultrie",
+        "Shelby"
+      ]
+    },
+    {
+      "roe_code": "12",
+      "type": "ROE",
+      "label": "Clay, Crawford, Jasper, Lawrence, and Richland ROE",
+      "counties": [
+        "Clay",
+        "Crawford",
+        "Jasper",
+        "Lawrence",
+        "Richland"
+      ]
+    },
+    {
+      "roe_code": "13",
+      "type": "ROE",
+      "label": "Clinton, Marion, Washington, and Jefferson ROE",
+      "counties": [
+        "Clinton",
+        "Marion",
+        "Washington",
+        "Jefferson"
+      ]
+    },
+    {
+      "roe_code": "15",
+      "type": "DISTRICT",
+      "label": "City of Chicago",
+      "counties": [
+        "Cook"
+      ]
+    },
+    {
+      "roe_code": "16",
+      "type": "ROE",
+      "label": "DeKalb ROE",
+      "counties": [
+        "DeKalb"
+      ]
+    },
+    {
+      "roe_code": "17",
+      "type": "ROE",
+      "label": "DeWitt, Livingston, Logan, and McLean ROE",
+      "counties": [
+        "DeWitt",
+        "Livingston",
+        "Logan",
+        "McLean"
+      ]
+    },
+    {
+      "roe_code": "19",
+      "type": "ROE",
+      "label": "DuPage ROE",
+      "counties": [
+        "DuPage"
+      ]
+    },
+    {
+      "roe_code": "20",
+      "type": "ROE",
+      "label": "Edwards, Gallatin, Hardin, Pope, Saline, Wabash, Wayne, White, and Hamilton ROE",
+      "counties": [
+        "Edwards",
+        "Gallatin",
+        "Hardin",
+        "Pope",
+        "Saline",
+        "Wabash",
+        "Wayne",
+        "White",
+        "Hamilton"
+      ]
+    },
+    {
+      "roe_code": "21",
+      "type": "ROE",
+      "label": "Franklin, Williamson, Johnson, and Massac ROE",
+      "counties": [
+        "Franklin",
+        "Williamson",
+        "Johnson",
+        "Massac"
+      ]
+    },
+    {
+      "roe_code": "24",
+      "type": "ROE",
+      "label": "Grundy and Kendall ROE",
+      "counties": [
+        "Grundy",
+        "Kendall"
+      ]
+    },
+    {
+      "roe_code": "26",
+      "type": "ROE",
+      "label": "Hancock, McDonough, Fulton, and Schuyler ROE",
+      "counties": [
+        "Hancock",
+        "McDonough",
+        "Fulton",
+        "Schuyler"
+      ]
+    },
+    {
+      "roe_code": "28",
+      "type": "ROE",
+      "label": "Bureau, Henry, and Stark ROE",
+      "counties": [
+        "Bureau",
+        "Henry",
+        "Stark"
+      ]
+    },
+    {
+      "roe_code": "30",
+      "type": "ROE",
+      "label": "Jackson and Perry ROE",
+      "counties": [
+        "Jackson",
+        "Perry"
+      ]
+    },
+    {
+      "roe_code": "31",
+      "type": "ROE",
+      "label": "Kane ROE",
+      "counties": [
+        "Kane"
+      ]
+    },
+    {
+      "roe_code": "32",
+      "type": "ROE",
+      "label": "Iroquois and Kankakee ROE",
+      "counties": [
+        "Iroquois",
+        "Kankakee"
+      ]
+    },
+    {
+      "roe_code": "33",
+      "type": "ROE",
+      "label": "Knox, Henderson, Mercer, and Warren ROE",
+      "counties": [
+        "Knox",
+        "Henderson",
+        "Mercer",
+        "Warren"
+      ]
+    },
+    {
+      "roe_code": "34",
+      "type": "ROE",
+      "label": "Lake ROE",
+      "counties": [
+        "Lake"
+      ]
+    },
+    {
+      "roe_code": "35",
+      "type": "ROE",
+      "label": "LaSalle, Marshall, and Putnam ROE",
+      "counties": [
+        "LaSalle",
+        "Marshall",
+        "Putnam"
+      ]
+    },
+    {
+      "roe_code": "39",
+      "type": "ROE",
+      "label": "Macon and Piatt ROE",
+      "counties": [
+        "Macon",
+        "Piatt"
+      ]
+    },
+    {
+      "roe_code": "40",
+      "type": "ROE",
+      "label": "Calhoun, Greene, Jersey, and Macoupin ROE",
+      "counties": [
+        "Calhoun",
+        "Greene",
+        "Jersey",
+        "Macoupin"
+      ]
+    },
+    {
+      "roe_code": "41",
+      "type": "ROE",
+      "label": "Madison ROE",
+      "counties": [
+        "Madison"
+      ]
+    },
+    {
+      "roe_code": "44",
+      "type": "ROE",
+      "label": "McHenry ROE",
+      "counties": [
+        "McHenry"
+      ]
+    },
+    {
+      "roe_code": "45",
+      "type": "ROE",
+      "label": "Monroe and Randolph ROE",
+      "counties": [
+        "Monroe",
+        "Randolph"
+      ]
+    },
+    {
+      "roe_code": "47",
+      "type": "ROE",
+      "label": "Lee, Ogle, and Whiteside ROE",
+      "counties": [
+        "Lee",
+        "Ogle",
+        "Whiteside"
+      ]
+    },
+    {
+      "roe_code": "48",
+      "type": "ROE",
+      "label": "Peoria ROE",
+      "counties": [
+        "Peoria"
+      ]
+    },
+    {
+      "roe_code": "49",
+      "type": "ROE",
+      "label": "Rock Island ROE",
+      "counties": [
+        "Rock Island"
+      ]
+    },
+    {
+      "roe_code": "50",
+      "type": "ROE",
+      "label": "St. Clair ROE",
+      "counties": [
+        "St. Clair"
+      ]
+    },
+    {
+      "roe_code": "51",
+      "type": "ROE",
+      "label": "Menard and Sangamon ROE",
+      "counties": [
+        "Menard",
+        "Sangamon"
+      ]
+    },
+    {
+      "roe_code": "53",
+      "type": "ROE",
+      "label": "Mason, Tazewell, and Woodford ROE",
+      "counties": [
+        "Mason",
+        "Tazewell",
+        "Woodford"
+      ]
+    },
+    {
+      "roe_code": "54",
+      "type": "ROE",
+      "label": "Vermilion ROE",
+      "counties": [
+        "Vermilion"
+      ]
+    },
+    {
+      "roe_code": "56",
+      "type": "ROE",
+      "label": "Will ROE",
+      "counties": [
+        "Will"
+      ]
+    },
+    {
+      "roe_code": "60",
+      "type": "OTHER",
+      "label": null,
+      "counties": []
+    }
+  ]
+}
